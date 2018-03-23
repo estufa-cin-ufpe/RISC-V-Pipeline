@@ -13,6 +13,7 @@
 // 
 // Dependencies: 
 //
+// Revision: 0.12 - ReWrite Branch Unit Logic (Give Flush Signal immediately)
 // Revision: 0.11 - Fix Flush logic (caused by branch)
 // Revision: 0.10 - Add Hazard Detection
 // Revision: 0.09 - Fix a bug that cause Controller delay one stage
@@ -69,7 +70,6 @@ logic [1:0] FBmuxSel;
 logic [DATA_W-1:0] FAmux_Result;
 logic [DATA_W-1:0] FBmux_Result;
 logic Reg_Stall;
-logic Flush;
 
 if_id_reg A;
 id_ex_reg B;
@@ -78,9 +78,8 @@ mem_wb_reg D;
 
 // next PC
     adder #(9) pcadd(PC, 9'b100, PCPlus4);
-    mux2 #(9) pcmux(PCPlus4, C.Br_Pc, C.PcSel, Next_PC);
-    assign Flush = Reg_Stall || PcSel;
-    flopr #(9) pcreg(clk, reset, Next_PC, Flush, PC);
+    mux2 #(9) pcmux(PCPlus4, BrPC[PC_W-1:0], PcSel, Next_PC);
+    flopr #(9) pcreg(clk, reset, Next_PC, Reg_Stall, PC);
 
     //Instruction memory
     instructionmemory instr_mem (PC, Instr);
@@ -88,7 +87,7 @@ mem_wb_reg D;
 // IF_ID_Reg A;
     always @(posedge clk) 
     begin
-        if ((reset) || (Reg_Stall) || (C.PcSel))   // initialization or flush
+        if ((reset) || (Reg_Stall) || (PcSel))   // initialization or flush
         begin
             A.Curr_Pc <= 0;
             A.Curr_Instr <= 0;
@@ -113,7 +112,7 @@ mem_wb_reg D;
 // ID_EX_Reg B;
     always @(posedge clk) 
     begin
-        if ((reset) || (Reg_Stall) || (C.PcSel))   // initialization or flush
+        if ((reset) || (Reg_Stall) || (PcSel))   // initialization or flush
         begin
             B.ALUSrc <= 0;
             B.MemtoReg <= 0;
@@ -133,6 +132,7 @@ mem_wb_reg D;
             B.ImmG <= 0;
             B.func3 <= 0;
             B.func7 <= 0;
+             B.Curr_Instr <= A.Curr_Instr;   //debug tmp
         end
         else
         begin
@@ -154,7 +154,7 @@ mem_wb_reg D;
             B.ImmG <= ExtImm;
             B.func3 <= A.Curr_Instr[14:12];
             B.func7 <= A.Curr_Instr[31:25];
-            B.Curr_Instr <= A.Curr_Instr;   //debug tmp
+             B.Curr_Instr <= A.Curr_Instr;   //debug tmp
         end
     end
 
@@ -177,7 +177,6 @@ mem_wb_reg D;
     begin
         if (reset)   // initialization
         begin
-            C.PcSel <= 0;
             C.RegWrite <= 0;
             C.MemtoReg <= 0;
             C.MemRead <= 0;
@@ -186,7 +185,6 @@ mem_wb_reg D;
             C.Pc_Imm <= 0;
             C.Pc_Four <= 0;
             C.Imm_Out <= 0;
-            C.Br_Pc <= 0;
             C.Alu_Result <= 0;
             C.RD_Two <= 0;
             C.rd <= 0;
@@ -195,7 +193,6 @@ mem_wb_reg D;
         end
         else
         begin
-            C.PcSel <= PcSel;
             C.RegWrite <= B.RegWrite;
             C.MemtoReg <= B.MemtoReg;
             C.MemRead <= B.MemRead;
@@ -204,13 +201,12 @@ mem_wb_reg D;
             C.Pc_Imm <= BrImm;
             C.Pc_Four <= Old_PC_Four;
             C.Imm_Out <= B.ImmG;
-            C.Br_Pc <= BrPC;
             C.Alu_Result <= ALUResult;
             C.RD_Two <= B.RD_Two;
             C.rd <= B.rd;
             C.func3 <= B.func3;
             C.func7 <= B.func7;
-            C.Curr_Instr <= B.Curr_Instr;   // debug tmp
+             C.Curr_Instr <= B.Curr_Instr;   // debug tmp
         end
     end
            
@@ -243,7 +239,7 @@ mem_wb_reg D;
             D.Alu_Result <= C.Alu_Result;
             D.MemReadData <= ReadData;
             D.rd <= C.rd;
-            D.Curr_Instr <= C.Curr_Instr;   //Debug Tmp
+             D.Curr_Instr <= C.Curr_Instr;   //Debug Tmp
         end
     end
 
