@@ -1,0 +1,23 @@
+# vsim -quiet -c tb_top_opt -do "sim.do" "+notimingchecks" 
+# Start time: 01:46:29 on Mar 02,2018
+# //  Questa Sim-64
+# //  Version 10.4c linux_x86_64 Jul 19 2015
+# //
+# //  Copyright 1991-2015 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# do sim.do
+# waveform.wlf
+# ** Note: $finish    : /users/ugrad/2016/fall/yifax10/EECS112L/test/verif/tb_top.sv(28)
+#    Time: 1500 ns  Iteration: 0  Instance: /tb_top
+# End time: 01:46:30 on Mar 02,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
