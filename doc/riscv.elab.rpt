@@ -1,0 +1,1749 @@
+Loading db file '/ecelib/linware/synopsys15/dc/libraries/syn/gtech.db'
+Loading db file '/ecelib/linware/synopsys15/dc/libraries/syn/standard.sldb'
+  Loading link library 'saed32lvt_tt1p05vn40c'
+  Loading link library 'saed32sram_tt1p05vn40c'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'riscv'.
+Information: Building the design 'Controller'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'ALUController'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'Datapath'. (HDL-193)
+
+Inferred memory devices in process
+	in routine Datapath line 89 in file
+		'/users/ugrad/2016/fall/yifax10/EECS112L/lab-3/design/Datapath.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        A_reg        | Flip-flop |  41   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine Datapath line 114 in file
+		'/users/ugrad/2016/fall/yifax10/EECS112L/lab-3/design/Datapath.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        B_reg        | Flip-flop |  141  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine Datapath line 177 in file
+		'/users/ugrad/2016/fall/yifax10/EECS112L/lab-3/design/Datapath.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        C_reg        | Flip-flop |  174  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine Datapath line 218 in file
+		'/users/ugrad/2016/fall/yifax10/EECS112L/lab-3/design/Datapath.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        D_reg        | Flip-flop |  169  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'adder' instantiated from design 'Datapath' with
+	the parameters "9". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'mux2' instantiated from design 'Datapath' with
+	the parameters "9". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'flopr' instantiated from design 'Datapath' with
+	the parameters "9". (HDL-193)
+
+Inferred memory devices in process
+	in routine flopr_WIDTH9 line 31 in file
+		'/users/ugrad/2016/fall/yifax10/EECS112L/lab-3/design/flopr.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |   9   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'instructionmemory'. (HDL-193)
+Statistics for MUX_OPs
+===============================================================
+|   block name/line    | Inputs | Outputs | # sel inputs | MB |
+===============================================================
+| instructionmemory/51 |  128   |   21    |      7       | N  |
+===============================================================
+Presto compilation completed successfully.
+Information: Building the design 'HazardDetection'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'RegFile'. (HDL-193)
+
+Inferred memory devices in process
+	in routine RegFile line 29 in file
+		'/users/ugrad/2016/fall/yifax10/EECS112L/lab-3/design/RegFile.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  register_file_reg  | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|  register_file_reg  | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|  register_file_reg  | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|  register_file_reg  | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|  register_file_reg  | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|  register_file_reg  | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|  register_file_reg  | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|  register_file_reg  | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|  register_file_reg  | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|  register_file_reg  | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|  register_file_reg  | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|  register_file_reg  | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|  register_file_reg  | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|  register_file_reg  | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|  register_file_reg  | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|  register_file_reg  | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|  register_file_reg  | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|  register_file_reg  | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|  register_file_reg  | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|  register_file_reg  | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|  register_file_reg  | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|  register_file_reg  | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|  register_file_reg  | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|  register_file_reg  | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|  register_file_reg  | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|  register_file_reg  | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|  register_file_reg  | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|  register_file_reg  | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|  register_file_reg  | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|  register_file_reg  | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|  register_file_reg  | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|  register_file_reg  | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+===========================================================
+| block name/line  | Inputs | Outputs | # sel inputs | MB |
+===========================================================
+|    RegFile/38    |   32   |   32    |      5       | N  |
+|    RegFile/39    |   32   |   32    |      5       | N  |
+===========================================================
+Presto compilation completed successfully.
+Information: Building the design 'imm_Gen'. (HDL-193)
+
+Statistics for case statements in always block at line 35 in file
+	'/users/ugrad/2016/fall/yifax10/EECS112L/lab-3/design/imm_Gen.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            36            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'ForwardingUnit'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'mux4' instantiated from design 'Datapath' with
+	the parameters "32". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'mux2' instantiated from design 'Datapath' with
+	the parameters "32". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'alu'. (HDL-193)
+Warning:  /users/ugrad/2016/fall/yifax10/EECS112L/lab-3/design/alu.sv:56: signed to unsigned assignment occurs. (VER-318)
+Warning:  /users/ugrad/2016/fall/yifax10/EECS112L/lab-3/design/alu.sv:58: signed to unsigned assignment occurs. (VER-318)
+Warning:  /users/ugrad/2016/fall/yifax10/EECS112L/lab-3/design/alu.sv:61: signed to unsigned assignment occurs. (VER-318)
+Warning:  /users/ugrad/2016/fall/yifax10/EECS112L/lab-3/design/alu.sv:63: signed to unsigned assignment occurs. (VER-318)
+Warning:  /users/ugrad/2016/fall/yifax10/EECS112L/lab-3/design/alu.sv:65: signed to unsigned assignment occurs. (VER-318)
+Warning:  /users/ugrad/2016/fall/yifax10/EECS112L/lab-3/design/alu.sv:67: signed to unsigned assignment occurs. (VER-318)
+Warning:  /users/ugrad/2016/fall/yifax10/EECS112L/lab-3/design/alu.sv:69: signed to unsigned assignment occurs. (VER-318)
+Warning:  /users/ugrad/2016/fall/yifax10/EECS112L/lab-3/design/alu.sv:71: signed to unsigned assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 40 in file
+	'/users/ugrad/2016/fall/yifax10/EECS112L/lab-3/design/alu.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            42            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'BranchUnit' instantiated from design 'Datapath' with
+	the parameters "9". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'datamemory'. (HDL-193)
+
+Statistics for case statements in always block at line 39 in file
+	'/users/ugrad/2016/fall/yifax10/EECS112L/lab-3/design/datamemory.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            43            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 60 in file
+	'/users/ugrad/2016/fall/yifax10/EECS112L/lab-3/design/datamemory.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            64            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine datamemory line 39 in file
+		'/users/ugrad/2016/fall/yifax10/EECS112L/lab-3/design/datamemory.sv'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|       rd_reg        | Latch |  32   |  Y  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+
+Inferred memory devices in process
+	in routine datamemory line 60 in file
+		'/users/ugrad/2016/fall/yifax10/EECS112L/lab-3/design/datamemory.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+===========================================================
+| block name/line  | Inputs | Outputs | # sel inputs | MB |
+===========================================================
+|  datamemory/45   |  512   |    2    |      9       | N  |
+|  datamemory/45   |  512   |    8    |      9       | N  |
+|  datamemory/47   |  512   |   16    |      9       | N  |
+|  datamemory/49   |  512   |   32    |      9       | N  |
+===========================================================
+Warning:  /users/ugrad/2016/fall/yifax10/EECS112L/lab-3/design/datamemory.sv:39: Netlist for always_comb block contains a latch. (ELAB-974)
+Presto compilation completed successfully.
+1
