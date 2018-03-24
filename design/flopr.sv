@@ -28,8 +28,12 @@ module flopr#
      input logic stall,
      output logic [WIDTH-1:0] q);
 
-always_ff @(posedge clk, posedge reset)
-    if (reset || stall) q <= 0;
-    else q <= d;
+    always_ff @(posedge clk, posedge reset)
+    begin
+        if (reset) q <= 0;
+        else if (stall) q<=0;
+            else q <= d;
+    end
+        
     
 endmodule

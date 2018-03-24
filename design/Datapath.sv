@@ -13,6 +13,7 @@
 // 
 // Dependencies: 
 //
+// Revision: 0.13 - Fix a Forwarding Unit Bug
 // Revision: 0.12 - ReWrite Branch Unit Logic (Give Flush Signal immediately)
 // Revision: 0.11 - Fix Flush logic (caused by branch)
 // Revision: 0.10 - Add Hazard Detection
@@ -202,7 +203,7 @@ mem_wb_reg D;
             C.Pc_Four <= Old_PC_Four;
             C.Imm_Out <= B.ImmG;
             C.Alu_Result <= ALUResult;
-            C.RD_Two <= B.RD_Two;
+            C.RD_Two <= FBmux_Result;
             C.rd <= B.rd;
             C.func3 <= B.func3;
             C.func7 <= B.func7;

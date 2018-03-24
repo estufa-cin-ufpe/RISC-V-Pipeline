@@ -1,0 +1,18 @@
+
+# Run the following command to add the Synopsys toolset to your PATH variable
+source /ecelib/linware/synopsys15/env/dc.csh
+
+
+# Inside your synthesis script, the $design is assumed to point to your VHDL/Verilog/SVerilog design files, if this variable is already set in your environment, you don't need to run it.
+setenv design `pwd`/design
+
+
+# The folllowing command will invoke the Synopsys Design Compiler (the synthesizer tool) and pass the synth.tcl script to run.
+dc_shell-t -f synth.tcl
+
+# if yo want to work with Graphical User Interface (GUI), run the following command.
+# dc_shell-t -gui
+
+# In order to exit the tool, type quit
+
+
