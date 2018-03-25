@@ -13,6 +13,7 @@
 // 
 // Dependencies: 
 // 
+// Revision: 0.04 - fix logic
 // Revision: 0.03 - add flush
 // Revision: 0.02 - add stall
 // Revision: 0.01 - File Created
@@ -31,8 +32,7 @@ module flopr#
     always_ff @(posedge clk, posedge reset)
     begin
         if (reset) q <= 0;
-        else if (stall) q<=0;
-            else q <= d;
+        else if (!stall) q<=d;
     end
         
     

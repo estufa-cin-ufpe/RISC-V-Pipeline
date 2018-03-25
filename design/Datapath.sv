@@ -13,6 +13,7 @@
 // 
 // Dependencies: 
 //
+// Revision: 0.14 - Fix Hazard Detection
 // Revision: 0.13 - Fix a Forwarding Unit Bug
 // Revision: 0.12 - ReWrite Branch Unit Logic (Give Flush Signal immediately)
 // Revision: 0.11 - Fix Flush logic (caused by branch)
@@ -65,12 +66,12 @@ logic [DATA_W-1:0] ReadData;
 logic [DATA_W-1:0] SrcB, ALUResult;
 logic [DATA_W-1:0] ExtImm,BrImm,Old_PC_Four,BrPC;
 logic [DATA_W-1:0] WRMuxResult,WrmuxSrc;
-logic PcSel;    // mux select and flush signal
+logic PcSel;    // mux select / flush signal
 logic [1:0] FAmuxSel;
 logic [1:0] FBmuxSel;
 logic [DATA_W-1:0] FAmux_Result;
 logic [DATA_W-1:0] FBmux_Result;
-logic Reg_Stall;
+logic Reg_Stall;    //1: PC fetch same, Register not update
 
 if_id_reg A;
 id_ex_reg B;
@@ -88,12 +89,12 @@ mem_wb_reg D;
 // IF_ID_Reg A;
     always @(posedge clk) 
     begin
-        if ((reset) || (Reg_Stall) || (PcSel))   // initialization or flush
+        if ((reset) || (PcSel))   // initialization or flush
         begin
             A.Curr_Pc <= 0;
             A.Curr_Instr <= 0;
         end
-        else
+        else if (!Reg_Stall)    // stall
         begin
             A.Curr_Pc <= PC;
             A.Curr_Instr <= Instr;
@@ -113,7 +114,7 @@ mem_wb_reg D;
 // ID_EX_Reg B;
     always @(posedge clk) 
     begin
-        if ((reset) || (Reg_Stall) || (PcSel))   // initialization or flush
+        if ((reset) || (Reg_Stall) || (PcSel))   // initialization or flush or generate a NOP if hazard
         begin
             B.ALUSrc <= 0;
             B.MemtoReg <= 0;
