@@ -14,7 +14,7 @@ Presto compilation completed successfully.
 Information: Building the design 'Datapath'. (HDL-193)
 
 Inferred memory devices in process
-	in routine Datapath line 89 in file
+	in routine Datapath line 90 in file
 		'/users/ugrad/2016/fall/yifax10/EECS112L/lab-3/design/Datapath.sv'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
@@ -23,7 +23,7 @@ Inferred memory devices in process
 ===============================================================================
 
 Inferred memory devices in process
-	in routine Datapath line 114 in file
+	in routine Datapath line 115 in file
 		'/users/ugrad/2016/fall/yifax10/EECS112L/lab-3/design/Datapath.sv'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
@@ -32,7 +32,7 @@ Inferred memory devices in process
 ===============================================================================
 
 Inferred memory devices in process
-	in routine Datapath line 177 in file
+	in routine Datapath line 178 in file
 		'/users/ugrad/2016/fall/yifax10/EECS112L/lab-3/design/Datapath.sv'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
@@ -41,7 +41,7 @@ Inferred memory devices in process
 ===============================================================================
 
 Inferred memory devices in process
-	in routine Datapath line 218 in file
+	in routine Datapath line 219 in file
 		'/users/ugrad/2016/fall/yifax10/EECS112L/lab-3/design/Datapath.sv'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
@@ -59,7 +59,7 @@ Information: Building the design 'flopr' instantiated from design 'Datapath' wit
 	the parameters "9". (HDL-193)
 
 Inferred memory devices in process
-	in routine flopr_WIDTH9 line 31 in file
+	in routine flopr_WIDTH9 line 32 in file
 		'/users/ugrad/2016/fall/yifax10/EECS112L/lab-3/design/flopr.sv'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
