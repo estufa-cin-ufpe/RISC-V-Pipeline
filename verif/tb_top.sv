@@ -5,17 +5,19 @@ module tb_top;
 //clock and reset signal declaration
   logic tb_clk, reset;
   logic [31:0] tb_WB_Data;
-  
-    //clock generation
-  always #10 tb_clk = ~tb_clk;
-  
-  //reset Generation
+
+//gerador de clock e reset
+  localparam CLKPERIOD = 10;
+  localparam CLKDELAY = CLKPERIOD / 2;
+
   initial begin
-    tb_clk = 0;
-    reset = 1;
-    #25 reset =0;
+     tb_clk = 0;
+     reset = 1;
+     #(CLKPERIOD);
+     reset = 0;
   end
-  
+
+  always #(CLKDELAY) tb_clk = ~tb_clk;
   
   riscv riscV(
       .clk(tb_clk),
@@ -24,7 +26,7 @@ module tb_top;
      );
 
   initial begin
-    #2500;
-    $finish;
+    #(CLKPERIOD * 30);
+    $stop;
    end
 endmodule
