@@ -84,7 +84,22 @@ mem_wb_reg D;
     flopr #(9) pcreg(clk, reset, Next_PC, Reg_Stall, PC);
 
     //Instruction memory
-    instructionmemory instr_mem (PC, Instr);
+    // Memoria32 meminst 
+    // (.raddress(PC),
+    //  .waddress(),
+    //  .Clk(clk),         
+    //  .Datain(),
+    //  .Dataout(Instr),
+    //  .Wr(MemWrite)
+    // );  
+    // instructionmemory instr_mem (PC, Instr);
+    // ramOnChip32 ()
+    Memoria32 meminst 
+    (.raddress(32'(PC)),
+     .Clk(clk),         
+     .Dataout(Instr),
+     .Wr(1'b0)
+    );
 
 // IF_ID_Reg A;
     always @(posedge clk) 
@@ -249,5 +264,6 @@ mem_wb_reg D;
     mux2 #(32) resmux(D.Alu_Result, D.MemReadData, D.MemtoReg, WrmuxSrc);  
     mux4 #(32) wrsmux(WrmuxSrc, D.Pc_Four, D.Imm_Out, D.Pc_Imm, D.RWSel, WRMuxResult);
     assign WB_Data = WRMuxResult;
+    
 
 endmodule
