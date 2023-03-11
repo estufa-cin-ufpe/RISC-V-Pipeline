@@ -20,8 +20,7 @@ module instructionmemory#(
      .Wr(1'b1)
     );
     
-    // rd is given the register number where the data will be written. This number is provided in bits 11 to 7 of get_dataOut
-    assign rd = get_dataOut[11:7]; //get_dataOut[ra[INS_ADDRESS-1:2]];
+    assign rd = get_dataOut;
 
 // assign Inst_mem[0 ]=32'b00000000000000000000000000010011;//	addi	$0,$0,0 			#r0 =0		(r0=0)
 // assign Inst_mem[1 ]=32'b00000000100000000000000010010011;//	addi	$1,$0,8 			#r1 =r0+8	(r1=8)
