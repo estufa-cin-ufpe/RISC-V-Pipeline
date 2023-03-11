@@ -82,24 +82,7 @@ mem_wb_reg D;
     adder #(9) pcadd(PC, 9'b100, PCPlus4);
     mux2 #(9) pcmux(PCPlus4, BrPC[PC_W-1:0], PcSel, Next_PC);
     flopr #(9) pcreg(clk, reset, Next_PC, Reg_Stall, PC);
-
-    //Instruction memory
-    // Memoria32 meminst 
-    // (.raddress(PC),
-    //  .waddress(),
-    //  .Clk(clk),         
-    //  .Datain(),
-    //  .Dataout(Instr),
-    //  .Wr(MemWrite)
-    // );  
-    // instructionmemory instr_mem (PC, Instr);
-    // ramOnChip32 ()
-    Memoria32 meminst 
-    (.raddress(32'(PC)),
-     .Clk(clk),         
-     .Dataout(Instr),
-     .Wr(1'b0)
-    );
+    instructionmemory instr_mem (clk, PC, Instr);
 
 // IF_ID_Reg A;
     always @(posedge clk) 
