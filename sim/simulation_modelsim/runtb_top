@@ -2,7 +2,7 @@ vlib work
 vdel -all -lib work
 vlib work
 vlog -f compile_verilog
-vsim -gui work.tb_top
+vsim -L altera_mf_ver -L lpm_ver -L sgate_ver -L altera_ver -novopt -gui work.tb_top
 
 add wave -position end sim:/tb_top/riscV/DATA_W
 add wave -position end sim:/tb_top/riscV/clk
@@ -11,6 +11,8 @@ add wave -position end sim:/tb_top/riscV/dp/instr_mem/rd
 add wave -position end sim:/tb_top/riscV/dp/B.RS_One
 add wave -position end sim:/tb_top/riscV/dp/B.RS_Two
 add wave -position end sim:/tb_top/riscV/dp/B.rd
+add wave -position end sim:/tb_top/riscV/dp/PC
+add wave -position end sim:/tb_top/riscV/dp/Instr
 add wave -position end sim:/tb_top/riscV/WB_Data
 add wave -position end sim:/tb_top/riscV/dp/rf/register_file
 add wave -position end sim:/tb_top/riscV/opcode
@@ -29,6 +31,8 @@ add wave -position end sim:/tb_top/riscV/Funct3
 add wave -position end sim:/tb_top/riscV/Operation
 
 radix signal sim:/tb_top/riscV/dp/instr_mem/rd hexadecimal
+radix signal sim:/tb_top/riscV/dp/PC unsigned
+radix signal sim:/tb_top/riscV/dp/Instr hexadecimal
 radix signal sim:/tb_top/riscV/dp/B.RS_One unsigned
 radix signal sim:/tb_top/riscV/dp/B.RS_Two unsigned
 radix signal sim:/tb_top/riscV/dp/B.rd unsigned
