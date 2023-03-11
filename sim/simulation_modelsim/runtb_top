@@ -34,7 +34,7 @@ radix signal sim:/tb_top/riscV/dp/instr_mem/rd hexadecimal
 radix signal sim:/tb_top/riscV/dp/PC unsigned
 radix signal sim:/tb_top/riscV/dp/Instr hexadecimal
 radix signal sim:/tb_top/riscV/dp/B.RS_One unsigned
-radix signal sim:/tb_top/riscV/dp/B.RS_Two unsigned
+radix signal sim:/tb_top/riscV/dp/B.RS_Two decimal
 radix signal sim:/tb_top/riscV/dp/B.rd unsigned
 radix signal sim:/tb_top/riscV/WB_Data hexadecimal
 radix signal sim:/tb_top/riscV/dp/rf/register_file[31] hexadecimal
