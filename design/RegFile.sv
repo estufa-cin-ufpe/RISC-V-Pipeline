@@ -35,6 +35,7 @@ begin
         register_file [ rg_wrt_dest ] <= rg_wrt_data;
         fd = $fopen("result.txt", "a");
         $fwrite(fd, "Register [%d] written with value: [%X] | [%d]\n", rg_wrt_dest, rg_wrt_data, rg_wrt_data);
+        $fclose(fd);
     end
 end
 
