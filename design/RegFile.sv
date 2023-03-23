@@ -34,7 +34,7 @@ begin
     else if( rst ==1'b0 && rg_wrt_en ==1'b1 ) begin
         register_file [ rg_wrt_dest ] <= rg_wrt_data;
         fd = $fopen("result.txt", "a");
-        $fwrite(fd, "Register [%X] written with value [%X]\n", rg_wrt_dest, rg_wrt_data);
+        $fwrite(fd, "Register [%d] written with value: [%X] | [%d]\n", rg_wrt_dest, rg_wrt_data, rg_wrt_data);
     end
 end
 

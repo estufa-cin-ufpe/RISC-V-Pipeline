@@ -26,7 +26,7 @@ module tb_top;
      );
 
   initial begin
-    #(CLKPERIOD * 40);
+    #(CLKPERIOD * 50);
     $stop;
    end
 endmodule
