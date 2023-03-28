@@ -2,7 +2,7 @@ vlib work
 vdel -all -lib work
 vlib work
 vlog -f compile_verilog
-vsim -L altera_mf_ver -L lpm_ver -L sgate_ver -L altera_ver -novopt -gui work.tb_top
+vsim -gui -L altera_mf_ver work.tb_top
 
 add wave -position end sim:/tb_top/riscV/DATA_W
 add wave -position end sim:/tb_top/riscV/clk
@@ -34,7 +34,7 @@ radix signal sim:/tb_top/riscV/dp/instr_mem/rd hexadecimal
 radix signal sim:/tb_top/riscV/dp/PC unsigned
 radix signal sim:/tb_top/riscV/dp/Instr hexadecimal
 radix signal sim:/tb_top/riscV/dp/B.RS_One unsigned
-radix signal sim:/tb_top/riscV/dp/B.RS_Two decimal
+radix signal sim:/tb_top/riscV/dp/B.RS_Two unsigned
 radix signal sim:/tb_top/riscV/dp/B.rd unsigned
 radix signal sim:/tb_top/riscV/WB_Data hexadecimal
 radix signal sim:/tb_top/riscV/dp/rf/register_file[31] hexadecimal
