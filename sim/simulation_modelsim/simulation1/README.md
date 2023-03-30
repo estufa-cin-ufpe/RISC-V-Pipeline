@@ -1,8 +1,8 @@
 # Resultados obtidos da Simulação 1
 
-Foi realizada uma simulação das instruções presentes no arquivo [instruction.mif](https://github.com/nathaliafab/RISC-V-PipeLine/blob/master/sim/simulation_modelsim/simulation1/instruction.mif), utilizando o testbench [tb_top](https://github.com/nathaliafab/RISC-V-PipeLine/blob/97da50fbb1a63871c3a6e22a330fe84966962b1c/verif/tb_top.sv) para testar o funcionamento do pipeline. 
+Foi realizada uma simulação das instruções presentes no arquivo [instruction.mif](/sim/simulation_modelsim/simulation1/instruction.mif), utilizando o testbench [tb_top](/verif/tb_top.sv) para testar o funcionamento do pipeline. 
 
-O resultado obtido está condizente com o resultado esperado e foi gerado durante a simulação, estando disponível no arquivo [result.txt](https://github.com/nathaliafab/RISC-V-PipeLine/blob/master/sim/simulation_modelsim/simulation1/result.txt).
+O resultado obtido está condizente com o resultado esperado e foi gerado durante a simulação, estando disponível no arquivo [result.txt](/sim/simulation_modelsim/simulation1/result.txt).
 
 ## Instruções testadas
 
