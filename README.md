@@ -48,7 +48,7 @@ The following table lists the implemented instructions and their status. The ins
 | 26| `SRLI`      |     ✅     |   ✅   |   ✅   |
 | 27| `SRAI`      |     ✅     |   ✅   |   ✅   |
 | 28| `ADD`       |     ✅     |   ✅   |   ✅   |
-| 29| `SUB`       |     ✅     |   ❌   |   ❌   |
+| 29| `SUB`       |     ✅     |   ✅   |   ✅   |
 | 30| `SLL`       |     ✅     |   ✅   |   ✅   |
 | 31| `SLT`       |     ✅     |   ✅   |   ✅   |
 | 32| `SLTU`      |     ✅     |   ✅   |   ✅   |
@@ -56,7 +56,7 @@ The following table lists the implemented instructions and their status. The ins
 | 34| `SRL`       |     ✅     |   ✅   |   ✅   |
 | 35| `SRA`       |     ✅     |   ✅   |   ✅   |
 | 36| `OR`        |     ✅     |   ✅   |   ✅   |
-| 37| `AND`       |     ✅     |   ❌   |   ❌   |
+| 37| `AND`       |     ✅     |   ✅   |   ✅   |
 | 38| `FENCE`     |     ❌     |   ❌   |   ❌   |
 | 39| `ECALL`     |     ❌     |   ❌   |   ❌   |
 | 40| `EBREAK`    |     ❌     |   ❌   |   ❌   |
