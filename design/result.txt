@@ -1,0 +1,5 @@
+Register [ 1] written with value: [00000008] | [         8]
+Register [ 1] written with value: [00000008] | [         8]
+Register [ 6] written with value: [fffffff8] | [4294967288]
+Register [ 7] written with value: [00000008] | [         8]
+Register [ 6] written with value: [00003000] | [     12288]
