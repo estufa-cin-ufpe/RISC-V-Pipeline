@@ -81,3 +81,27 @@ Register [ 7] written with value: [0000000a] | [        10]
 Register [ 8] written with value: [00000008] | [         8]
 Register [ 9] written with value: [0000000c] | [        12]
 ```
+# Resultados obtidos da Simulação 1.2
+
+Foi realizada uma simulação das instruções presentes no arquivo [luiandsub.mif](/sim/simulation_modelsim/simulation1/luiandsub.mif), utilizando o testbench [tb_top](/verif/tb_top.sv) para testar o funcionamento do pipeline.
+
+O resultado obtido está condizente com o resultado esperado e foi gerado durante a simulação, estando disponível no arquivo [result-lui.txt](/sim/simulation_modelsim/simulation1/result-lui.txt).
+
+## Instruções testadas
+
+```assembly
+addi $1,$0,8
+sub $6,$6,$1
+and $7,$6,$1
+lui x6,3
+```
+
+## Registradores após cada instrução
+
+```shell
+Register [ 1] written with value: [00000008] | [         8]
+Register [ 1] written with value: [00000008] | [         8]
+Register [ 6] written with value: [fffffff8] | [4294967288]
+Register [ 7] written with value: [00000008] | [         8]
+Register [ 6] written with value: [00003000] | [     12288]
+```
