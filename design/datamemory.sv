@@ -34,7 +34,16 @@ module datamemory#(
     output logic [ DATA_W -1:0] rd // Read Data
     );
     
-    logic [DATA_W-1:0] mem [(2**DM_ADDRESS)-1:0];
+    logic [DATA_W-1 :0] get_dataOut; // Data output from the memory
+
+    Memoria32Data meminst 
+    (.raddress(a),
+     .Clk(clk),         
+     .waddress(a),
+     .Dataout(get_dataOut),
+     .Datain(wd),
+     .Wr(MemWrite)
+    );
     
     always_comb 
     begin
@@ -42,37 +51,19 @@ module datamemory#(
         begin
             case(Funct3)
             3'b000: //LB
-                rd = {mem[a][7]? 24'hFFFFFF:24'b0, mem[a][7:0]};
+                rd = {get_dataOut[7]? 24'hFFFFFF:24'b0, get_dataOut[7:0]};
             3'b001: //LH
-                rd = {mem[a][15]? 16'hFFFF:16'b0, mem[a][15:0]};
+                rd = {get_dataOut[15]? 16'hFFFF:16'b0, get_dataOut[15:0]};
             3'b010: //LW
-                rd = mem[a];
+                rd = get_dataOut;
             3'b100: //LBU
-                rd = {24'b0, mem[a][7:0]};
+                rd = {24'b0, get_dataOut[7:0]};
             3'b101: //LHU
-                rd = {16'b0, mem[a][15:0]};
+                rd = {16'b0, get_dataOut[15:0]};
             default:
-                rd = mem[a];
+                rd = get_dataOut;
             endcase
         end
 	end
     
-    always @(posedge clk) 
-    begin
-       if (MemWrite)
-        begin
-            case(Funct3)
-            3'b000: //SB
-                mem[a][7:0] =  wd[7:0];
-            3'b001: //SH
-                mem[a][15:0] = wd[15:0];
-            3'b010: //SW
-                mem[a] = wd;
-            default:
-                mem[a] = wd;
-            endcase
-        end
-    end
-    
 endmodule
-
