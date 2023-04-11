@@ -26,44 +26,57 @@ module datamemory#(
     parameter DATA_W = 32
     )(
     input logic clk,
-	input logic MemRead , // comes from control unit
+    input logic MemRead , // comes from control unit
     input logic MemWrite , // Comes from control unit
     input logic [ DM_ADDRESS -1:0] a , // Read / Write address - 9 LSB bits of the ALU output
     input logic [ DATA_W -1:0] wd , // Write Data
     input logic [2:0] Funct3, // bits 12 to 14 of the instruction
     output logic [ DATA_W -1:0] rd // Read Data
     );
-    
-    logic [DATA_W-1 :0] get_dataOut; // Data output from the memory
 
-    Memoria32Data meminst 
-    (.raddress(a),
-     .Clk(clk),         
-     .waddress(a),
-     .Dataout(get_dataOut),
-     .Datain(wd),
-     .Wr(MemWrite)
+    wire [31:0] raddress;
+    wire [31:0] waddress;
+    wire [31:0] Datain;
+    wire [31:0] Dataout;
+    wire Wr;
+
+    assign raddress = {{22{1'b0}}, a};
+    assign waddress = {{22{1'b0}}, a};
+    assign Datain = wd;
+    assign Wr = MemWrite;
+    integer fd;
+
+    Memoria32Data mem32(
+        .raddress(raddress),
+        .waddress(waddress),
+        .Clk(clk),
+        .Datain(Datain),
+        .Dataout(Dataout),
+        .Wr(Wr)
     );
-    
+
     always_comb 
     begin
-       if(MemRead)
+        if(MemRead)
         begin
             case(Funct3)
             3'b000: //LB
-                rd = {get_dataOut[7]? 24'hFFFFFF:24'b0, get_dataOut[7:0]};
+                rd = {{24{Dataout[7]}}, Dataout[7:0], {8{1'b0}}};
             3'b001: //LH
-                rd = {get_dataOut[15]? 16'hFFFF:16'b0, get_dataOut[15:0]};
+                rd = {{16{Dataout[15]}}, Dataout[15:0], {16{1'b0}}};
             3'b010: //LW
-                rd = get_dataOut;
+                rd = Dataout;
             3'b100: //LBU
-                rd = {24'b0, get_dataOut[7:0]};
+                rd = {{24{1'b0}}, Dataout[7:0]};
             3'b101: //LHU
-                rd = {16'b0, get_dataOut[15:0]};
+                rd = {{16{1'b0}}, Dataout[15:0]};
             default:
-                rd = get_dataOut;
+                rd = Dataout;
             endcase
+            fd = $fopen("resultData.txt", "a");
+            $fwrite(fd, "Read value: [%X] | [%d]\nDataOut: %X", rd, rd, Dataout);
+            $fclose(fd);
         end
-	end
-    
+    end
+
 endmodule
