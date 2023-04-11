@@ -1,0 +1,27 @@
+DEPTH = 65536;                   -- The size of memory in words
+WIDTH = 8;                    -- The size of data in bits
+ADDRESS_RADIX = DEC;          -- The radix for address values
+DATA_RADIX = BIN;             -- The radix for data values
+CONTENT                       -- start of (address : data pairs)
+BEGIN
+000: 00010011;  --addi	$0,$0,0 			#r0 =0		(r0=0)
+001: 00000000;
+002: 00000000;
+003: 00000000;
+
+004: 10010011;  --addi	$1,$0,8 			#r1 =r0+8	(r1=8)
+005: 00000000;
+006: 10000000;
+007: 00000000;
+
+008: 00010011;  --addi	$2,$0,4 			#r2 =r0+4	(r2=4)
+009: 00000001;
+010: 01000000;
+011: 00000000;
+
+012: 10110011;  --or    $3,$1,$2			#r3 =r1|r2	(r3=12) // Forwarding Test
+013: 11100001;
+014: 00100000;
+015: 00000000;
+
+END;
