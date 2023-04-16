@@ -72,6 +72,7 @@ logic [1:0] FBmuxSel;
 logic [DATA_W-1:0] FAmux_Result;
 logic [DATA_W-1:0] FBmux_Result;
 logic Reg_Stall;    //1: PC fetch same, Register not update
+logic [DATA_W-1:0] RegF [31:0];
 
 if_id_reg A;
 id_ex_reg B;
@@ -105,7 +106,7 @@ mem_wb_reg D;
     // //Register File
     assign opcode = A.Curr_Instr[6:0];
     RegFile rf(clk, reset, D.RegWrite, D.rd, A.Curr_Instr[19:15], A.Curr_Instr[24:20],
-            WRMuxResult, Reg1, Reg2);
+            WRMuxResult, Reg1, Reg2, RegF);
     // //sign extend
     imm_Gen Ext_Imm (A.Curr_Instr,ExtImm);
 
@@ -211,7 +212,7 @@ mem_wb_reg D;
     end
            
     // // // // Data memory 
-	datamemory data_mem (clk, C.MemRead, C.MemWrite, C.Alu_Result[8:0], C.RD_Two, C.func3, ReadData);
+	datamemory data_mem (clk, C.MemRead, C.MemWrite, B.Curr_Instr, RegF, C.RD_Two, C.func3, ReadData);
 
 // MEM_WB_Reg D;
     always @(posedge clk) 
