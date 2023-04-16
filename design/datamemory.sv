@@ -22,12 +22,14 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module datamemory#(
+    parameter DM_ADDRESS = 9 ,
     parameter DATA_W = 32
     )(
     input logic clk,
     input logic MemRead , // comes from control unit
     input logic MemWrite , // Comes from control unit
     input logic [ DATA_W -1:0] Instr, // Instruction
+    input logic [ DM_ADDRESS -1:0] a , // Write address - 9 LSB bits of the ALU output
     input logic [ DATA_W -1:0] register_file [31:0], // Register File
     input logic [ DATA_W -1:0] wd , // Write Data
     input logic [2:0] Funct3, // bits 12 to 14 of the instruction
@@ -41,7 +43,7 @@ module datamemory#(
     wire Wr;
 
     assign raddress = {{22{1'b0}}, (register_file[Instr[19:15]] + Instr[31:20])}; // This is: 00000000000000000000000000000000{rs1 + imm}
-    assign waddress = {{22{1'b0}}, (register_file[Instr[19:15]] + Instr[31:20])};
+    assign waddress = {{22{1'b0}}, a};
     assign Datain = wd;
     assign Wr = MemWrite;
     integer fd;
@@ -78,6 +80,12 @@ module datamemory#(
             $fwrite(fd, "Read value: [%X] | [%b]\n", rd, rd);
             $fclose(fd);
         end
-    end
 
+        else if(MemWrite)
+        begin
+            fd = $fopen("resultData.txt", "a");
+            $fwrite(fd, "Write value: [%X] | [%b] on address [%X]\n", wd, wd, waddress);
+            $fclose(fd);
+        end
+    end
 endmodule
