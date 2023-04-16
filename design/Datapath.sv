@@ -212,7 +212,7 @@ mem_wb_reg D;
     end
            
     // // // // Data memory 
-	datamemory data_mem (clk, C.MemRead, C.MemWrite, B.Curr_Instr, RegF, C.RD_Two, C.func3, ReadData);
+	datamemory data_mem (clk, C.MemRead, C.MemWrite, B.Curr_Instr, C.Alu_Result, RegF, C.RD_Two, C.func3, ReadData);
 
 // MEM_WB_Reg D;
     always @(posedge clk) 
