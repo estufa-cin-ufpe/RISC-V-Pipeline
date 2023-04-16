@@ -29,6 +29,7 @@ add wave -position end sim:/tb_top/riscV/ALUop_Reg
 add wave -position end sim:/tb_top/riscV/Funct7
 add wave -position end sim:/tb_top/riscV/Funct3
 add wave -position end sim:/tb_top/riscV/Operation
+add wave -position end sim:/tb_top/riscV/dp/data_mem/*
 
 radix signal sim:/tb_top/riscV/dp/instr_mem/rd hexadecimal
 radix signal sim:/tb_top/riscV/dp/PC unsigned
