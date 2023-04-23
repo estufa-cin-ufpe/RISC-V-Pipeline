@@ -21,7 +21,7 @@ The following table lists the implemented instructions and their status. The ins
 | # | Instruction | Implemented | Tested | Working | Observations |
 |---|-------------|:-----------:|:------:|:-------:|--------------|
 | 1 | `LUI`       |     ✅     |   ✅   |   ✅   |             |
-| 2 | `AUIPC`     |     ✅     |   ✅   |   ✅   |             |
+| 2 | `AUIPC`     |     ✅     |   ✅   |   ✅   | it works, but... ([issue #4](https://github.com/nathaliafab/RISC-V-PipeLine/issues/4)) |
 | 3 | `JAL`       |     ✅     |   ❌   |   ❌   |             |
 | 4 | `JALR`      |     ✅     |   ❌   |   ❌   |             |
 | 5 | `BEQ`       |     ✅     |   ❌   |   ❌   |             |
@@ -30,14 +30,14 @@ The following table lists the implemented instructions and their status. The ins
 | 8 | `BGE`       |     ✅     |   ❌   |   ❌   |             |
 | 9 | `BLTU`      |     ✅     |   ❌   |   ❌   |             |
 | 10| `BGEU`      |     ✅     |   ❌   |   ❌   |             |
-| 11| `LB`        |     ✅     |   ✅   |   ✅   | not able to function correctly in the presence of a hazard |
-| 12| `LH`        |     ✅     |   ✅   |   ✅   | not able to function correctly in the presence of a hazard |
-| 13| `LW`        |     ✅     |   ✅   |   ✅   | not able to function correctly in the presence of a hazard |
+| 11| `LB`        |     ✅     |   ✅   |   ✅   | it works, but... ([issue #9](https://github.com/nathaliafab/RISC-V-PipeLine/issues/9)) |
+| 12| `LH`        |     ✅     |   ✅   |   ✅   | it works, but... ([issue #9](https://github.com/nathaliafab/RISC-V-PipeLine/issues/9)) |
+| 13| `LW`        |     ✅     |   ✅   |   ✅   | it works, but... ([issue #9](https://github.com/nathaliafab/RISC-V-PipeLine/issues/9)) |
 | 14| `LBU`       |     ✅     |   ❌   |   ❌   |             |
 | 15| `LHU`       |     ✅     |   ❌   |   ❌   |             |
-| 16| `SB`        |     ✅     |   ❌   |   ❌   |             |
-| 17| `SH`        |     ✅     |   ❌   |   ❌   |             |
-| 18| `SW`        |     ✅     |   ❌   |   ❌   |             |
+| 16| `SB`        |     ✅     |   ❌   |   ❌   | ([issue #11](https://github.com/nathaliafab/RISC-V-PipeLine/issues/11)) |
+| 17| `SH`        |     ✅     |   ❌   |   ❌   | ([issue #11](https://github.com/nathaliafab/RISC-V-PipeLine/issues/11)) |
+| 18| `SW`        |     ✅     |   ❌   |   ❌   | ([issue #11](https://github.com/nathaliafab/RISC-V-PipeLine/issues/11)) |
 | 19| `ADDI`      |     ✅     |   ✅   |   ✅   |             |
 | 20| `SLTI`      |     ✅     |   ✅   |   ✅   |             |
 | 21| `SLTIU`     |     ✅     |   ✅   |   ✅   |             |
