@@ -22,67 +22,66 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module datamemory#(
-    parameter DM_ADDRESS = 9 ,
+    parameter DM_ADDRESS = 9,
     parameter DATA_W = 32
-    )(
+)(
     input logic clk,
-    input logic MemRead , // comes from control unit
-    input logic MemWrite , // Comes from control unit
-    input logic [ DATA_W -1:0] Instr, // Instruction
-    input logic [ DM_ADDRESS -1:0] a , // Write address - 9 LSB bits of the ALU output
-    input logic [ DATA_W -1:0] register_file [31:0], // Register File
-    input logic [ DATA_W -1:0] wd , // Write Data
+    input logic MemRead, // comes from control unit
+    input logic MemWrite, // Comes from control unit
+    input logic [DM_ADDRESS - 1:0] a, // Read / Write address - 9 LSB bits of the ALU output
+    input logic [DATA_W - 1:0] wd, // Write Data
     input logic [2:0] Funct3, // bits 12 to 14 of the instruction
-    output logic [ DATA_W -1:0] rd // Read Data
-    );
+    output logic [DATA_W - 1:0] rd // Read Data
+);
 
-    wire [31:0] raddress;
-    wire [31:0] waddress;
-    wire [31:0] Datain;
-    wire [31:0] Dataout;
-    wire Wr;
-
-    assign raddress = {{22{1'b0}}, (register_file[Instr[19:15]] + Instr[31:20])}; // This is: 00000000000000000000000000000000{rs1 + imm}
-    assign waddress = {{22{1'b0}}, a};
-    assign Datain = wd;
-    assign Wr = MemWrite;
+    logic [31:0] raddress;
+    logic [31:0] waddress;
+    logic [31:0] Datain;
+    logic [31:0] Dataout;
+    logic Wr;
+    logic notclk;
     integer fd;
+
+    initial begin
+        assign raddress = {{22{1'b0}}, a};
+        assign waddress = {{22{1'b0}}, a};
+        assign Datain = wd;
+        assign Wr = MemWrite;
+        assign notclk = ~clk;
+    end
 
     Memoria32Data mem32(
         .raddress(raddress),
         .waddress(waddress),
-        .Clk(clk),
+        .Clk(notclk),
         .Datain(Datain),
         .Dataout(Dataout),
         .Wr(Wr)
     );
 
-    always_comb 
-    begin
-        if(MemRead)
-        begin
-            case(Funct3)
-            3'b000: //LB
-                rd = {Dataout[7]? 24'hFFFFFF:24'b0, Dataout[7:0]};
-            3'b001: //LH
-                rd = {Dataout[15]? 16'hFFFF:16'b0, Dataout[15:0]};
-            3'b010: //LW
-                rd = Dataout;
-            3'b100: //LBU
-                rd = {24'b0, Dataout[7:0]};
-            3'b101: //LHU
-                rd = {16'b0, Dataout[15:0]};
-            default:
-                rd = Dataout;
+    always_comb begin
+        if (MemRead) begin
+            case (Funct3)
+                3'b000: //LB
+                    rd <= {Dataout[7] ? 24'hFFFFFF : 24'b0, Dataout[7:0]};
+                3'b001: //LH
+                    rd <= {Dataout[15] ? 16'hFFFF : 16'b0, Dataout[15:0]};
+                3'b010: //LW
+                    rd <= Dataout;
+                3'b100: //LBU
+                    rd <= {24'b0, Dataout[7:0]};
+                3'b101: //LHU
+                    rd <= {16'b0, Dataout[15:0]};
+                default:
+                    rd <= Dataout;
             endcase
-
+            
             fd = $fopen("resultData.txt", "a");
             $fwrite(fd, "Read value: [%X] | [%b]\n", rd, rd);
             $fclose(fd);
         end
 
-        else if(MemWrite)
-        begin
+        else if (MemWrite) begin
             fd = $fopen("resultData.txt", "a");
             $fwrite(fd, "Write value: [%X] | [%b] on address [%X]\n", wd, wd, waddress);
             $fclose(fd);
