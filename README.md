@@ -30,9 +30,9 @@ The following table lists the implemented instructions and their status. The ins
 | 8 | `BGE`       |     ✅     |   ❌   |   ❌   |             |
 | 9 | `BLTU`      |     ✅     |   ❌   |   ❌   |             |
 | 10| `BGEU`      |     ✅     |   ❌   |   ❌   |             |
-| 11| `LB`        |     ✅     |   ✅   |   ✅   | it works, but... ([issue #9](https://github.com/nathaliafab/RISC-V-PipeLine/issues/9)) |
-| 12| `LH`        |     ✅     |   ✅   |   ✅   | it works, but... ([issue #9](https://github.com/nathaliafab/RISC-V-PipeLine/issues/9)) |
-| 13| `LW`        |     ✅     |   ✅   |   ✅   | it works, but... ([issue #9](https://github.com/nathaliafab/RISC-V-PipeLine/issues/9)) |
+| 11| `LB`        |     ✅     |   ✅   |   ✅   |             |
+| 12| `LH`        |     ✅     |   ✅   |   ✅   |             |
+| 13| `LW`        |     ✅     |   ✅   |   ✅   |             |
 | 14| `LBU`       |     ✅     |   ❌   |   ❌   |             |
 | 15| `LHU`       |     ✅     |   ❌   |   ❌   |             |
 | 16| `SB`        |     ✅     |   ❌   |   ❌   | ([issue #11](https://github.com/nathaliafab/RISC-V-PipeLine/issues/11)) |
