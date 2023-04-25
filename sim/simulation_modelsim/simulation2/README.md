@@ -12,19 +12,14 @@ As seguintes instruções foram testadas durante a simulação:
 
 ```assembly
 addi x7,x0,1
-addi x1,x0,8
 addi x2,x0,4
-or x3,x1,x2
 or x4,x2,x0
 lb x6,0(x7)
 add x6,x4,x0
-or x4,x2,x0
-or x4,x2,x0
 lb x7,0(x6)
 lh x8,0(x6)
 lw x9,0(x6)
 ```
-
 
 ## Registradores após cada instrução
 
@@ -41,14 +36,10 @@ Onde `x` é o número do registrador, `hhhhhhhh` é o valor em hexadecimal guard
 ```shell
 Register [ 7] written with value: [00000001] | [         1]
 Register [ 7] written with value: [00000001] | [         1]
-Register [ 1] written with value: [00000008] | [         8]
 Register [ 2] written with value: [00000004] | [         4]
-Register [ 3] written with value: [0000000c] | [        12]
 Register [ 4] written with value: [00000004] | [         4]
 Register [ 6] written with value: [ffffff8f] | [4294967183]
 Register [ 6] written with value: [00000008] | [         8]
-Register [ 4] written with value: [00000004] | [         4]
-Register [ 4] written with value: [00000004] | [         4]
 Register [ 7] written with value: [fffffffb] | [4294967291]
 Register [ 8] written with value: [ffffaafb] | [4294945531]
 Register [ 9] written with value: [0001aafb] | [    109307]
@@ -69,12 +60,17 @@ Já quando é feita uma escrita, `hhhhhhhh` é o valor em hexadecimal que será 
 ---
 
 ```shell
+Read value: [xxxxxxxx] | [xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx]
+Read value: [xxxxxxxx] | [xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx]
+Read value: [ffffffff] | [11111111111111111111111111111111]
 Read value: [ffffffff] | [11111111111111111111111111111111]
 Read value: [ffffff8f] | [11111111111111111111111110001111]
-Read value: [ffffffff] | [11111111111111111111111111111111]
+Read value: [ffffff8f] | [11111111111111111111111110001111]
 Read value: [fffffffb] | [11111111111111111111111111111011]
+Read value: [fffffffb] | [11111111111111111111111111111011]
+Read value: [ffffaafb] | [11111111111111111010101011111011]
 Read value: [ffffaafb] | [11111111111111111010101011111011]
 Read value: [0001aafb] | [00000000000000011010101011111011]
 ```
 
-Note que as leituras 1 e 3 são lixos de memória e não foram escritas em lugar algum durante a simulação. As outras foram escritas nos registradores `x6`, `x7`, `x8` e `x9`.
+Note que não são todas as leituras registradas que chegam aos registradores. Este arquivo serve para acompanhar o estado do módulo da memória, não para acompanhar o estado dos registradores.
