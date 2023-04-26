@@ -82,6 +82,16 @@ module datamemory#(
         end
 
         else if (MemWrite) begin
+            case(Funct3)
+                3'b000: //SB
+                    mem[a][7:0] =  wd[7:0];
+                3'b001: //SH
+                    mem[a][15:0] = wd[15:0];
+                3'b010: //SW
+                    mem[a] = wd;
+                default:
+                    mem[a] = wd;
+            endcase
             fd = $fopen("resultData.txt", "a");
             $fwrite(fd, "Write value: [%X] | [%b] on address [%X]\n", wd, wd, waddress);
             $fclose(fd);
