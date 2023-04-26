@@ -58,6 +58,8 @@ module datamemory#(
         .Dataout(Dataout),
         .Wr(Wr)
     );
+    
+    logic [DATA_W-1:0] mem [(2**DM_ADDRESS)-1:0];
 
     always_comb begin
         if (MemRead) begin
