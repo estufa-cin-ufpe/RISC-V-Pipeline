@@ -33,8 +33,8 @@ The following table lists the implemented instructions and their status. The ins
 | 11| `LB`        |     ✅     |   ✅   |   ✅   |             |
 | 12| `LH`        |     ✅     |   ✅   |   ✅   |             |
 | 13| `LW`        |     ✅     |   ✅   |   ✅   |             |
-| 14| `LBU`       |     ✅     |   ❌   |   ❌   |             |
-| 15| `LHU`       |     ✅     |   ❌   |   ❌   |             |
+| 14| `LBU`       |     ✅     |   ✅   |   ✅   |             |
+| 15| `LHU`       |     ✅     |   ✅   |   ✅   |             |
 | 16| `SB`        |     ✅     |   ❌   |   ❌   | ([issue #11](https://github.com/nathaliafab/RISC-V-PipeLine/issues/11)) |
 | 17| `SH`        |     ✅     |   ❌   |   ❌   | ([issue #11](https://github.com/nathaliafab/RISC-V-PipeLine/issues/11)) |
 | 18| `SW`        |     ✅     |   ❌   |   ❌   | ([issue #11](https://github.com/nathaliafab/RISC-V-PipeLine/issues/11)) |
