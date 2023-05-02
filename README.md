@@ -21,7 +21,7 @@ The following table lists the implemented instructions and their status. The ins
 | # | Instruction | Implemented | Tested | Working | Observations |
 |---|-------------|:-----------:|:------:|:-------:|--------------|
 | 1 | `LUI`       |     ✅     |   ✅   |   ✅   |             |
-| 2 | `AUIPC`     |     ✅     |   ✅   |   ✅   | it works, but... ([issue #4](https://github.com/nathaliafab/RISC-V-PipeLine/issues/4)) |
+| 2 | `AUIPC`     |     ✅     |   ✅   |   ✅   |             |
 | 3 | `JAL`       |     ✅     |   ❌   |   ❌   |             |
 | 4 | `JALR`      |     ✅     |   ❌   |   ❌   |             |
 | 5 | `BEQ`       |     ✅     |   ❌   |   ❌   |             |
