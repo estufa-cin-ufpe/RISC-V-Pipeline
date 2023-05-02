@@ -14,7 +14,7 @@ module instructionmemory#(
 
     Memoria32 meminst 
     (.raddress(32'(ra)),
-     .Clk(clk),         
+     .Clk(~clk),         
      .Dataout(get_dataOut),
      .Wr(1'b1)
     );
