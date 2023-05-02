@@ -1,8 +1,8 @@
 # Resultados obtidos da Simulação 3
 
-Foi realizada uma simulação das instruções presentes no arquivo [instruction.mif](/sim/simulation_modelsim/simulation3/instruction.mif), utilizando o testbench [tb_top](/verif/tb_top.sv) para testar o funcionamento do pipeline. 
+Foi realizada uma simulação das instruções presentes no arquivo [instruction.mif](/instruction.mif), utilizando o testbench [tb_top](/verif/tb_top.sv) para testar o funcionamento do pipeline. 
 
-O resultado obtido está condizente com o resultado esperado e foi gerado durante a simulação, estando disponível nos arquivos [result.txt](/sim/simulation_modelsim/simulation3/result.txt).
+O resultado obtido está condizente com o resultado esperado e foi gerado durante a simulação, estando disponível nos arquivos [result.txt](/result.txt).
 
 ## Instruções testadas
 

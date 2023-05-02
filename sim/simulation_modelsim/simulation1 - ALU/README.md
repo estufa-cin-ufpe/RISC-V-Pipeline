@@ -1,8 +1,8 @@
 # Resultados obtidos da Simulação 1
 
-Foi realizada uma simulação das instruções presentes no arquivo [instruction.mif](/sim/simulation_modelsim/simulation1/instruction.mif), utilizando o testbench [tb_top](/verif/tb_top.sv) para testar o funcionamento do pipeline. 
+Foi realizada uma simulação das instruções presentes no arquivo [instruction.mif](/instruction.mif), utilizando o testbench [tb_top](/verif/tb_top.sv) para testar o funcionamento do pipeline. 
 
-O resultado obtido está condizente com o resultado esperado e foi gerado durante a simulação, estando disponível no arquivo [result.txt](/sim/simulation_modelsim/simulation1/result.txt).
+O resultado obtido está condizente com o resultado esperado e foi gerado durante a simulação, estando disponível no arquivo [result.txt](/result.txt).
 
 ## Instruções testadas
 
@@ -83,9 +83,9 @@ Register [ 9] written with value: [0000000c] | [        12]
 ```
 # Resultados obtidos da Simulação 1.2
 
-Foi realizada uma simulação das instruções presentes no arquivo [luiandsub.mif](/sim/simulation_modelsim/simulation1/luiandsub.mif), utilizando o testbench [tb_top](/verif/tb_top.sv) para testar o funcionamento do pipeline.
+Foi realizada uma simulação das instruções presentes no arquivo [luiandsub.mif](/luiandsub.mif), utilizando o testbench [tb_top](/verif/tb_top.sv) para testar o funcionamento do pipeline.
 
-O resultado obtido está condizente com o resultado esperado e foi gerado durante a simulação, estando disponível no arquivo [result-lui.txt](/sim/simulation_modelsim/simulation1/result-lui.txt).
+O resultado obtido está condizente com o resultado esperado e foi gerado durante a simulação, estando disponível no arquivo [result-lui.txt](/result-lui.txt).
 
 ## Instruções testadas
 
