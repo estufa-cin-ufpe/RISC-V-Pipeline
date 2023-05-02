@@ -1,18 +1,18 @@
 # Resultados obtidos da Simulação 3
 
-Foi realizada uma simulação das instruções presentes no arquivo [instruction.mif](/instruction.mif), utilizando o testbench [tb_top](/verif/tb_top.sv) para testar o funcionamento do pipeline. 
+Foi realizada uma simulação das instruções presentes no arquivo [instruction.mif](instruction.mif), utilizando o testbench [tb_top](/verif/tb_top.sv) para testar o funcionamento do pipeline. 
 
-O resultado obtido está condizente com o resultado esperado e foi gerado durante a simulação, estando disponível nos arquivos [result.txt](/result.txt).
+O resultado obtido está condizente com o resultado esperado e foi gerado durante a simulação, estando disponível nos arquivos [result.txt](result.txt).
 
 ## Instruções testadas
 
 As seguintes instruções foram testadas durante a simulação:
 
 ```assembly
-    addi x1,x0,8
-    sub x6,x6,x1
-    and x7,x6,x1
-    auipc x6,3
+addi x1,x0,8
+sub x6,x6,x1
+and x7,x6,x1
+auipc x6,3
 ```
 
 ## Registradores após cada instrução
