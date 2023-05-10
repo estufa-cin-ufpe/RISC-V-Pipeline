@@ -1,4 +1,4 @@
-DEPTH = 65536;                   -- The size of memory in words
+DEPTH = 65536;                -- The size of memory in words
 WIDTH = 8;                    -- The size of data in bits
 ADDRESS_RADIX = DEC;          -- The radix for address values
 DATA_RADIX = BIN;             -- The radix for data values
@@ -20,7 +20,7 @@ BEGIN
 010: 10000000;
 011: 00000000;
 
-012: 00110011;  --or x4, x2, x0			#r4 =r2|r0	(r4=4)
+012: 00110011;  --or x4, x2, x0     <- essa instrução não chega a executar
 013: 01100010;
 014: 00000001;
 015: 00000000;
@@ -39,5 +39,15 @@ BEGIN
 025: 00000100;
 026: 00100000;
 027: 00000000;
+
+028: 11100011; -- beq x7, x7, -8	<- branch taken. volta duas instruções (PC=20)
+029: 10001100;
+030: 01110011;
+031: 11111110;
+
+032: 00110011;  --or x4, x2, x0     <- essa instrução não chega a executar
+033: 01100010;
+034: 00000001;
+035: 00000000;
 
 END;
