@@ -34,5 +34,7 @@ Onde `x` é o número do registrador, `hhhhhhhh` é o valor em hexadecimal guard
 Register [ 7] written with value: [00000001] | [         1]
 Register [ 2] written with value: [00000004] | [         4]
 Register [10] written with value: [0000000c] | [        12]
+Register [ 6] written with value: [00000004] | [         4]
+Register [ 7] written with value: [00000001] | [         1]
 Register [ 8] written with value: [00000002] | [         2]
 ```
