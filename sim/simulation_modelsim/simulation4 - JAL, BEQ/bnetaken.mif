@@ -45,7 +45,7 @@ BEGIN
 030: 10000011;
 031: 11111110;
 
-032: 00110011;  --or x4, x2, x0	<- essa instrução é executada normalmente
+032: 00110011;  --or x4, x2, x0	<- essa instrução não chega a executar
 033: 01100010;
 034: 00000001;
 035: 00000000;

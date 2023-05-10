@@ -88,3 +88,6 @@ Register [ 7] written with value: [00000001] | [         1]
 Register [ 8] written with value: [00000002] | [         2]
 Register [ 4] written with value: [00000004] | [         4]
 ```
+
+# BNE, BLT, BGE, BLTU, BGEU
+- [bnetaken.mif](bnetaken.mif)
