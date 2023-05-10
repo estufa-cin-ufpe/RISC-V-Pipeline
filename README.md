@@ -25,7 +25,7 @@ The following table lists the implemented instructions and their status. The ins
 | 3 | `JAL`       |     ✅     |   ✅   |   ✅   |             |
 | 4 | `JALR`      |     ✅     |   ❌   |   ❌   |             |
 | 5 | `BEQ`       |     ✅     |   ✅   |   ✅   |             |
-| 6 | `BNE`       |     ✅     |   ❌   |   ❌   |             |
+| 6 | `BNE`       |     ✅     |   ✅   |   ✅   |             |
 | 7 | `BLT`       |     ✅     |   ❌   |   ❌   |             |
 | 8 | `BGE`       |     ✅     |   ❌   |   ❌   |             |
 | 9 | `BLTU`      |     ✅     |   ❌   |   ❌   |             |
