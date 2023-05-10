@@ -22,7 +22,7 @@ The following table lists the implemented instructions and their status. The ins
 |---|-------------|:-----------:|:------:|:-------:|--------------|
 | 1 | `LUI`       |     ✅     |   ✅   |   ✅   |             |
 | 2 | `AUIPC`     |     ✅     |   ✅   |   ✅   |             |
-| 3 | `JAL`       |     ✅     |   ❌   |   ❌   |             |
+| 3 | `JAL`       |     ✅     |   ✅   |   ✅   |             |
 | 4 | `JALR`      |     ✅     |   ❌   |   ❌   |             |
 | 5 | `BEQ`       |     ✅     |   ❌   |   ❌   |             |
 | 6 | `BNE`       |     ✅     |   ❌   |   ❌   |             |
