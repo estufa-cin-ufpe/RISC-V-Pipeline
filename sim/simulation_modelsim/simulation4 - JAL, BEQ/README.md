@@ -16,6 +16,8 @@ or x4, x2, x0
 add x6, x4, x0
 addi x7, x0, 1
 addi x8, x0, 2
+beq x7, x7, -8
+or x4, x2, x0
 ```
 
 ## Registradores após cada instrução
@@ -37,4 +39,19 @@ Register [10] written with value: [0000000c] | [        12]
 Register [ 6] written with value: [00000004] | [         4]
 Register [ 7] written with value: [00000001] | [         1]
 Register [ 8] written with value: [00000002] | [         2]
+Register [ 7] written with value: [00000001] | [         1]
+Register [ 8] written with value: [00000002] | [         2]
+Register [ 7] written with value: [00000001] | [         1]
+Register [ 8] written with value: [00000002] | [         2]
+Register [ 7] written with value: [00000001] | [         1]
+Register [ 8] written with value: [00000002] | [         2]
+Register [ 7] written with value: [00000001] | [         1]
+Register [ 8] written with value: [00000002] | [         2]
+Register [ 7] written with value: [00000001] | [         1]
+Register [ 8] written with value: [00000002] | [         2]
+Register [ 7] written with value: [00000001] | [         1]
+Register [ 8] written with value: [00000002] | [         2]
+Register [ 7] written with value: [00000001] | [         1]
+Register [ 8] written with value: [00000002] | [         2]
+
 ```
