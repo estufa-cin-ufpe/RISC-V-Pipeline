@@ -1,10 +1,10 @@
 # Resultados obtidos da Simulação 2
 
-Foi realizada uma simulação das instruções presentes no arquivo [instruction.mif](/sim/simulation_modelsim/simulation2/instruction.mif), utilizando o testbench [tb_top](/verif/tb_top.sv) para testar o funcionamento do pipeline. 
+Foi realizada uma simulação das instruções presentes no arquivo [instruction.mif](instruction.mif), utilizando o testbench [tb_top](/verif/tb_top.sv) para testar o funcionamento do pipeline. 
 
-Além disso, foi introduzido uma memória de dados de 32 bits. A memória de dados é inicializada com o conteúdo do arquivo [data.mif](/sim/simulation_modelsim/simulation2/data.mif).
+Além disso, foi introduzido uma memória de dados de 32 bits. A memória de dados é inicializada com o conteúdo do arquivo [data.mif](data.mif).
 
-O resultado obtido está condizente com o resultado esperado e foi gerado durante a simulação, estando disponível nos arquivos [result.txt](/sim/simulation_modelsim/simulation2/result.txt) e [resultData.txt](/sim/simulation_modelsim/simulation2/resultData.txt).
+O resultado obtido está condizente com o resultado esperado e foi gerado durante a simulação, estando disponível nos arquivos [result.txt](result.txt) e [resultData.txt](resultData.txt).
 
 ## Instruções testadas
 
@@ -74,3 +74,8 @@ Read value: [0001aafb] | [00000000000000011010101011111011]
 ```
 
 Note que não são todas as leituras registradas que chegam aos registradores. Este arquivo serve para acompanhar o estado do módulo da memória, não para acompanhar o estado dos registradores.
+
+## Teste das instruções `LBU` e `LHU`
+Foi realizada a simulação das instruções contidas no arquivo [instruction2.mif](instruction2.mif), que são, em suma, as mesmas instruções da simulação anterior, porém com as instruções `LBU` e `LHU`, em vez de `LB` e `LH`, respectivamente.
+
+O resultado obtido está condizente com o resultado esperado e foi gerado durante a simulação, estando disponível no arquivo [resultU.txt](resultU.txt).

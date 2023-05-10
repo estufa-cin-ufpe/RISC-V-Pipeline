@@ -1,41 +1,41 @@
 # Resultados obtidos da Simulação 1
 
-Foi realizada uma simulação das instruções presentes no arquivo [instruction.mif](/sim/simulation_modelsim/simulation1/instruction.mif), utilizando o testbench [tb_top](/verif/tb_top.sv) para testar o funcionamento do pipeline. 
+Foi realizada uma simulação das instruções presentes no arquivo [instruction.mif](instruction.mif), utilizando o testbench [tb_top](/verif/tb_top.sv) para testar o funcionamento do pipeline. 
 
-O resultado obtido está condizente com o resultado esperado e foi gerado durante a simulação, estando disponível no arquivo [result.txt](/sim/simulation_modelsim/simulation1/result.txt).
+O resultado obtido está condizente com o resultado esperado e foi gerado durante a simulação, estando disponível no arquivo [result.txt](result.txt).
 
 ## Instruções testadas
 
 As seguintes instruções foram testadas durante a simulação:
 
 ```assembly
-addi $0,$0,0
-addi $1,$0,8
-addi $2,$0,4
-or $3,$1,$2
-or $4,$2,$0
-add $6,$4,$0
-addi $4,$0,2
-addi $5,$0,-2
-sll $18,$1,$4
-srl $19,$5,$4
-sra $20,$5,$4
-slt $21,$1,$2
-slt $22,$2,$1
-sltu $23,$5,$1
-sltu $24,$1,$5
-slti $25,$1,8
-slti $26,$1,16
-addi $5,$0,-4
-sltiu $27,$1,-2
-sltiu $28,$5,-2
-slli $29,$5,1
-srli $30,$5,1
-srai $31,$5,1
-xori $6,$1,10
-ori $7,$1,2
-andi $8,$1,10
-xor $9,$1,$2
+addi x0,x0,0
+addi x1,x0,8
+addi x2,x0,4
+or x3,x1,x2
+or x4,x2,x0
+add x6,x4,x0
+addi x4,x0,2
+addi x5,x0,-2
+sll x18,x1,x4
+srl x19,x5,x4
+sra x20,x5,x4
+slt x21,x1,x2
+slt x22,x2,x1
+sltu x23,x5,x1
+sltu x24,x1,x5
+slti x25,x1,8
+slti x26,x1,16
+addi x5,x0,-4
+sltiu x27,x1,-2
+sltiu x28,x5,-2
+slli x29,x5,1
+srli x30,x5,1
+srai x31,x5,1
+xori x6,x1,10
+ori x7,x1,2
+andi x8,x1,10
+xor x9,x1,x2
 ```
 
 
@@ -83,16 +83,16 @@ Register [ 9] written with value: [0000000c] | [        12]
 ```
 # Resultados obtidos da Simulação 1.2
 
-Foi realizada uma simulação das instruções presentes no arquivo [luiandsub.mif](/sim/simulation_modelsim/simulation1/luiandsub.mif), utilizando o testbench [tb_top](/verif/tb_top.sv) para testar o funcionamento do pipeline.
+Foi realizada uma simulação das instruções presentes no arquivo [luiandsub.mif](luiandsub.mif), utilizando o testbench [tb_top](/verif/tb_top.sv) para testar o funcionamento do pipeline.
 
-O resultado obtido está condizente com o resultado esperado e foi gerado durante a simulação, estando disponível no arquivo [result-lui.txt](/sim/simulation_modelsim/simulation1/result-lui.txt).
+O resultado obtido está condizente com o resultado esperado e foi gerado durante a simulação, estando disponível no arquivo [result-lui.txt](result-lui.txt).
 
 ## Instruções testadas
 
 ```assembly
-addi $1,$0,8
-sub $6,$6,$1
-and $7,$6,$1
+addi x1,x0,8
+sub x6,x6,x1
+and x7,x6,x1
 lui x6,3
 ```
 

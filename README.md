@@ -21,7 +21,7 @@ The following table lists the implemented instructions and their status. The ins
 | # | Instruction | Implemented | Tested | Working | Observations |
 |---|-------------|:-----------:|:------:|:-------:|--------------|
 | 1 | `LUI`       |     ✅     |   ✅   |   ✅   |             |
-| 2 | `AUIPC`     |     ✅     |   ✅   |   ✅   | it works, but... ([issue #4](https://github.com/nathaliafab/RISC-V-PipeLine/issues/4)) |
+| 2 | `AUIPC`     |     ✅     |   ✅   |   ✅   |             |
 | 3 | `JAL`       |     ✅     |   ❌   |   ❌   |             |
 | 4 | `JALR`      |     ✅     |   ❌   |   ❌   |             |
 | 5 | `BEQ`       |     ✅     |   ❌   |   ❌   |             |
@@ -33,8 +33,8 @@ The following table lists the implemented instructions and their status. The ins
 | 11| `LB`        |     ✅     |   ✅   |   ✅   |             |
 | 12| `LH`        |     ✅     |   ✅   |   ✅   |             |
 | 13| `LW`        |     ✅     |   ✅   |   ✅   |             |
-| 14| `LBU`       |     ✅     |   ❌   |   ❌   |             |
-| 15| `LHU`       |     ✅     |   ❌   |   ❌   |             |
+| 14| `LBU`       |     ✅     |   ✅   |   ✅   |             |
+| 15| `LHU`       |     ✅     |   ✅   |   ✅   |             |
 | 16| `SB`        |     ✅     |   ❌   |   ❌   | ([issue #11](https://github.com/nathaliafab/RISC-V-PipeLine/issues/11)) |
 | 17| `SH`        |     ✅     |   ❌   |   ❌   | ([issue #11](https://github.com/nathaliafab/RISC-V-PipeLine/issues/11)) |
 | 18| `SW`        |     ✅     |   ❌   |   ❌   | ([issue #11](https://github.com/nathaliafab/RISC-V-PipeLine/issues/11)) |
