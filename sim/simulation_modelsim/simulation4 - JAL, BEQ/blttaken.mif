@@ -1,0 +1,53 @@
+DEPTH = 65536;                   -- The size of memory in words
+WIDTH = 8;                    -- The size of data in bits
+ADDRESS_RADIX = DEC;          -- The radix for address values
+DATA_RADIX = BIN;             -- The radix for data values
+CONTENT                       -- start of (address : data pairs)
+BEGIN
+
+000: 10010011; -- addi x7, x0, 1
+001: 00000011;
+002: 00010000;
+003: 00000000;
+
+004: 00010011;  --addi x2, x0, 4 			#r2 =r0+4	(r2=4)
+005: 00000001;
+006: 01000000;
+007: 00000000;
+
+008: 01101111;  -- jal x10, 8		<- guarda (PC + 4) em x10 e pula para (PC + 8 = 16)
+009: 00000101;
+010: 10000000;
+011: 00000000;
+
+012: 00110011;  --or x4, x2, x0	<- essa instrução não chega a executar
+013: 01100010;
+014: 00000001;
+015: 00000000;
+
+016: 00110011;  --add x6, x4, x0			#r6 =r4+r2	(r6=8)
+017: 00000011;
+018: 00100010;
+019: 00000000;
+
+020: 10010011; -- addi x7, x0, 2
+021: 00000011;
+022: 00100000;
+023: 00000000;
+
+024: 00010011; -- addi x8, x0, 1
+025: 00000100;
+026: 00010000;
+027: 00000000;
+
+028: 11100011; -- blt x7, x8, -8	<- branch taken.
+029: 01001100;
+030: 01110100;
+031: 11111110;
+
+032: 00110011;  --or x4, x2, x0	<- essa instrução é executada normalmente
+033: 01100010;
+034: 00000001;
+035: 00000000;
+
+END;
