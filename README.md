@@ -28,7 +28,7 @@ The following table lists the implemented instructions and their status. The ins
 | 6 | `BNE`       |     ✅     |   ✅   |   ✅   |             |
 | 7 | `BLT`       |     ✅     |   ✅   |   ✅   |             |
 | 8 | `BGE`       |     ✅     |   ✅   |   ✅   |             |
-| 9 | `BLTU`      |     ✅     |   ❌   |   ❌   |             |
+| 9 | `BLTU`      |     ✅     |   ✅   |   ✅   |             |
 | 10| `BGEU`      |     ✅     |   ❌   |   ❌   |             |
 | 11| `LB`        |     ✅     |   ✅   |   ✅   |             |
 | 12| `LH`        |     ✅     |   ✅   |   ✅   |             |
