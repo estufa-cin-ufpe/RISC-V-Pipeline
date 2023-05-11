@@ -23,13 +23,13 @@ The following table lists the implemented instructions and their status. The ins
 | 1 | `LUI`       |     ✅     |   ✅   |   ✅   |             |
 | 2 | `AUIPC`     |     ✅     |   ✅   |   ✅   |             |
 | 3 | `JAL`       |     ✅     |   ✅   |   ✅   |             |
-| 4 | `JALR`      |     ✅     |   ❌   |   ❌   |             |
+| 4 | `JALR`      |     ✅     |   ❌   |   ❌   | ([issue #15](https://github.com/nathaliafab/RISC-V-PipeLine/issues/15)) |
 | 5 | `BEQ`       |     ✅     |   ✅   |   ✅   |             |
 | 6 | `BNE`       |     ✅     |   ✅   |   ✅   |             |
 | 7 | `BLT`       |     ✅     |   ✅   |   ✅   |             |
 | 8 | `BGE`       |     ✅     |   ✅   |   ✅   |             |
-| 9 | `BLTU`      |     ✅     |   ✅   |   ✅   |             |
-| 10| `BGEU`      |     ✅     |   ❌   |   ❌   |             |
+| 9 | `BLTU`      |     ✅     |   ✅   |   ❌   | ([issue #18](https://github.com/nathaliafab/RISC-V-PipeLine/issues/18)) |
+| 10| `BGEU`      |     ✅     |   ✅   |   ❌   | ([issue #18](https://github.com/nathaliafab/RISC-V-PipeLine/issues/18)) |
 | 11| `LB`        |     ✅     |   ✅   |   ✅   |             |
 | 12| `LH`        |     ✅     |   ✅   |   ✅   |             |
 | 13| `LW`        |     ✅     |   ✅   |   ✅   |             |
