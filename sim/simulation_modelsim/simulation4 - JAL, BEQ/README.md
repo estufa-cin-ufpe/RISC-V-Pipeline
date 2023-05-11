@@ -1,10 +1,12 @@
-# Resultados obtidos da Simulação 4 - BEQ taken
+# Resultados obtidos da Simulação 4
 
-Foi realizada uma simulação das instruções presentes no arquivo [instruction.mif](instruction.mif), utilizando o testbench [tb_top](/verif/tb_top.sv) para testar o funcionamento do pipeline. 
+## BEQ taken
 
-O resultado obtido está condizente com o resultado esperado e foi gerado durante a simulação, estando disponível nos arquivos [result.txt](result.txt).
+Foi realizada uma simulação das instruções presentes no arquivo [beqtaken.mif](beqtaken.mif), utilizando o testbench [tb_top](/verif/tb_top.sv) para testar o funcionamento do pipeline. 
 
-## Instruções testadas
+O resultado obtido está condizente com o resultado esperado e foi gerado durante a simulação, estando disponível no arquivo [beqtaken.txt](beqtaken.txt).
+
+### Instruções testadas
 
 As seguintes instruções foram testadas durante a simulação:
 
@@ -20,7 +22,7 @@ beq x7, x7, -8
 or x4, x2, x0
 ```
 
-## Registradores após cada instrução
+### Registradores após cada instrução
 
 O arquivo gerado é sempre criado/atualizado quando algum registrador é alterado. Ele possui o seguinte formato:
 
@@ -56,14 +58,12 @@ Register [ 8] written with value: [00000002] | [         2]
 
 ```
 
-# BEQ not taken
+## BEQ not taken
 
-- [instruction2.mif](instruction2.mif)
-- [result2.txt](result2.txt)
+- [beqntaken.mif](beqntaken.mif)
+- [beqntaken.txt](beqntaken.txt)
 
-## Instruções testadas
-
-As seguintes instruções foram testadas durante a simulação:
+### Instruções testadas
 
 ```assembly
 addi x7, x0, 1
@@ -77,7 +77,7 @@ beq x8, x7, -8
 or x4, x2, x0
 ```
 
-## Registradores após cada instrução
+### Registradores após cada instrução
 
 ```shell
 Register [ 7] written with value: [00000001] | [         1]
@@ -89,5 +89,26 @@ Register [ 8] written with value: [00000002] | [         2]
 Register [ 4] written with value: [00000004] | [         4]
 ```
 
-# BNE, BLT, BGE, BLTU, BGEU
+## BNE taken
 - [bnetaken.mif](bnetaken.mif)
+- [bnetaken.txt](bnetaken.txt)
+
+Note que é a mesma configuração do BEQ not taken, mas o resultado é diferente.
+
+## BLT taken
+- [blttaken.mif](blttaken.mif)
+- [blttaken.txt](blttaken.txt)
+
+## BGE taken
+- [bgetaken.mif](bgetaken.mif)
+- [bgetaken.txt](bgetaken.txt)
+
+Note que é a mesma configuração do BLT taken, mas com os registradores invertidos.
+
+## BLTU taken
+- [bltutaken.mif](bltutaken.mif)
+- [bltutaken.txt](bltutaken.txt)
+
+## BGEU taken
+- [bgeutaken.mif](bgeutaken.mif)
+- [bgeutaken.txt](bgeutaken.txt)
