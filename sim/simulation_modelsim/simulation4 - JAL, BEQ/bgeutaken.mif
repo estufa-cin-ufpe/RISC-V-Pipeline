@@ -40,7 +40,7 @@ BEGIN
 026: 01000000;
 027: 00000000;
 
-028: 11100011; -- bgeu x8, x7, -8	<- branch taken.    |r8| >= |r2| ? taken : not taken
+028: 11100011; -- bgeu x8, x7, -8	<- branch taken.    |r8| >= |r7| ? taken : not taken
 029: 01111100;
 030: 01110100;
 031: 11111110;
