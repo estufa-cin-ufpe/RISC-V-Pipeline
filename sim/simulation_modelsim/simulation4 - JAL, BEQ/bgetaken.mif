@@ -40,12 +40,12 @@ BEGIN
 026: 00010000;
 027: 00000000;
 
-028: 11100011; -- bge x7, x8, -8	<- branch taken.
+028: 11100011; -- bge x8, x7, -8	<- branch taken.
 029: 11011100;
 030: 10000011;
 031: 11111110;
 
-032: 00110011;  --or x4, x2, x0	<- essa instrução é executada normalmente
+032: 00110011;  --or x4, x2, x0	<- essa instrução não chega a executar
 033: 01100010;
 034: 00000001;
 035: 00000000;
