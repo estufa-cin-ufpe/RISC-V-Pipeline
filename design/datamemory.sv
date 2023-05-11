@@ -39,7 +39,6 @@ module datamemory#(
     logic [31:0] Datain;
     logic [31:0] Dataout;
     logic Wr;
-    logic notclk;
     integer fd;
 
     initial begin
@@ -47,13 +46,12 @@ module datamemory#(
         assign waddress = {{22{1'b0}}, a};
         assign Datain = wd;
         assign Wr = MemWrite;
-        assign notclk = ~clk;
     end
 
     Memoria32Data mem32(
         .raddress(raddress),
         .waddress(waddress),
-        .Clk(notclk),
+        .Clk(~clk),
         .Datain(Datain),
         .Dataout(Dataout),
         .Wr(Wr)
