@@ -107,6 +107,8 @@ Note que é a mesma configuração do BLT taken, mas com os registradores invert
 
 ## BLTU taken - (not working)
 - [bltutaken.mif](bltutaken.mif)
+- [bltutaken.txt](bltutaken.txt)
 
 ## BGEU taken - (not working)
 - [bgeutaken.mif](bgeutaken.mif)
+- [bgeutaken.txt](bgeutaken.txt)
