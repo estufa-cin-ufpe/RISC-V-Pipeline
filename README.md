@@ -23,7 +23,7 @@ The following table lists the implemented instructions and their status. The ins
 | 1 | `LUI`       |     ✅     |   ✅   |   ✅   |             |
 | 2 | `AUIPC`     |     ✅     |   ✅   |   ✅   |             |
 | 3 | `JAL`       |     ✅     |   ✅   |   ✅   |             |
-| 4 | `JALR`      |     ✅     |   ❌   |   ❌   | ([issue #15](https://github.com/nathaliafab/RISC-V-PipeLine/issues/15)) |
+| 4 | `JALR`      |     ✅     |   ✅   |   ✅   |             |
 | 5 | `BEQ`       |     ✅     |   ✅   |   ✅   |             |
 | 6 | `BNE`       |     ✅     |   ✅   |   ✅   |             |
 | 7 | `BLT`       |     ✅     |   ✅   |   ✅   |             |
