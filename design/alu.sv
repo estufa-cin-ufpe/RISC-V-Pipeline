@@ -63,12 +63,12 @@ module alu#(
                     ALUResult = (SrcA != SrcB) ? 1 : 0;
             4'b1100:        // Less Than
                     ALUResult = ($signed(SrcA) < $signed(SrcB)) ? 1 : 0;
-            4'b1101:        // Greater Than
-                    ALUResult = ($signed(SrcA) > $signed(SrcB)) ? 1 : 0;
+            4'b1101:        // Greater/Equal Than
+                    ALUResult = ($signed(SrcA) >= $signed(SrcB)) ? 1 : 0;
             4'b1110:        // Unsigned Less Than
-                    ALUResult = ($unsigned(SrcA) < $unsigned(SrcB)) ? 1 : 0;
-            4'b1111:        // Ungsigned Greater Than
-                    ALUResult = ($unsigned(SrcA) > $unsigned(SrcB)) ? 1 : 0;
+                    ALUResult = ((SrcA[31] == 1'b1 ? -SrcA : SrcA) < (SrcB[31] == 1'b1 ? -SrcB : SrcB)) ? 1 : 0;
+            4'b1111:        // Ungsigned Greater/Equal Than
+                    ALUResult = ((SrcA[31] == 1'b1 ? -SrcA : SrcA) >= (SrcB[31] == 1'b1 ? -SrcB : SrcB)) ? 1 : 0;
             4'b1010:        // Always True, for jal
                     ALUResult = 1;
             default:

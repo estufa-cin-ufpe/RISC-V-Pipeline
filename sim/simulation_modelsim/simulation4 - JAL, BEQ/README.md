@@ -105,8 +105,14 @@ Note que é a mesma configuração do BEQ not taken, mas o resultado é diferent
 
 Note que é a mesma configuração do BLT taken, mas com os registradores invertidos.
 
-## BLTU taken - (not working)
+## BLTU taken
 - [bltutaken.mif](bltutaken.mif)
+- [bltutaken.txt](bltutaken.txt)
 
-## BGEU taken - (not working)
+## BGEU taken
 - [bgeutaken.mif](bgeutaken.mif)
+- [bgeutaken.txt](bgeutaken.txt)
+
+## JALR
+- [jalr.mif](jalr.mif)
+- [jalr.txt](jalr.txt)

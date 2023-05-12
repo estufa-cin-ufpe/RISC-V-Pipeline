@@ -23,13 +23,13 @@ The following table lists the implemented instructions and their status. The ins
 | 1 | `LUI`       |     ✅     |   ✅   |   ✅   |             |
 | 2 | `AUIPC`     |     ✅     |   ✅   |   ✅   |             |
 | 3 | `JAL`       |     ✅     |   ✅   |   ✅   |             |
-| 4 | `JALR`      |     ✅     |   ❌   |   ❌   | ([issue #15](https://github.com/nathaliafab/RISC-V-PipeLine/issues/15)) |
+| 4 | `JALR`      |     ✅     |   ✅   |   ✅   |             |
 | 5 | `BEQ`       |     ✅     |   ✅   |   ✅   |             |
 | 6 | `BNE`       |     ✅     |   ✅   |   ✅   |             |
 | 7 | `BLT`       |     ✅     |   ✅   |   ✅   |             |
 | 8 | `BGE`       |     ✅     |   ✅   |   ✅   |             |
-| 9 | `BLTU`      |     ✅     |   ✅   |   ❌   | ([issue #18](https://github.com/nathaliafab/RISC-V-PipeLine/issues/18)) |
-| 10| `BGEU`      |     ✅     |   ✅   |   ❌   | ([issue #18](https://github.com/nathaliafab/RISC-V-PipeLine/issues/18)) |
+| 9 | `BLTU`      |     ✅     |   ✅   |   ✅   |             |
+| 10| `BGEU`      |     ✅     |   ✅   |   ✅   |             |
 | 11| `LB`        |     ✅     |   ✅   |   ✅   |             |
 | 12| `LH`        |     ✅     |   ✅   |   ✅   |             |
 | 13| `LW`        |     ✅     |   ✅   |   ✅   |             |
@@ -37,7 +37,7 @@ The following table lists the implemented instructions and their status. The ins
 | 15| `LHU`       |     ✅     |   ✅   |   ✅   |             |
 | 16| `SB`        |     ✅     |   ❌   |   ❌   | ([issue #11](https://github.com/nathaliafab/RISC-V-PipeLine/issues/11)) |
 | 17| `SH`        |     ✅     |   ❌   |   ❌   | ([issue #11](https://github.com/nathaliafab/RISC-V-PipeLine/issues/11)) |
-| 18| `SW`        |     ✅     |   ❌   |   ❌   | ([issue #11](https://github.com/nathaliafab/RISC-V-PipeLine/issues/11)) |
+| 18| `SW`        |     ✅     |   ✅   |   ✅   |             |
 | 19| `ADDI`      |     ✅     |   ✅   |   ✅   |             |
 | 20| `SLTI`      |     ✅     |   ✅   |   ✅   |             |
 | 21| `SLTIU`     |     ✅     |   ✅   |   ✅   |             |
