@@ -37,7 +37,7 @@ The following table lists the implemented instructions and their status. The ins
 | 15| `LHU`       |     ✅     |   ✅   |   ✅   |             |
 | 16| `SB`        |     ✅     |   ❌   |   ❌   | ([issue #11](https://github.com/nathaliafab/RISC-V-PipeLine/issues/11)) |
 | 17| `SH`        |     ✅     |   ❌   |   ❌   | ([issue #11](https://github.com/nathaliafab/RISC-V-PipeLine/issues/11)) |
-| 18| `SW`        |     ✅     |   ❌   |   ❌   | ([issue #11](https://github.com/nathaliafab/RISC-V-PipeLine/issues/11)) |
+| 18| `SW`        |     ✅     |   ✅   |   ✅   |             |
 | 19| `ADDI`      |     ✅     |   ✅   |   ✅   |             |
 | 20| `SLTI`      |     ✅     |   ✅   |   ✅   |             |
 | 21| `SLTIU`     |     ✅     |   ✅   |   ✅   |             |
