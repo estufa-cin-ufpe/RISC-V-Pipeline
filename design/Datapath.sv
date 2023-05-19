@@ -56,7 +56,10 @@ module Datapath #(
     output logic [6:0] Funct7,
     output logic [2:0] Funct3,
     output logic [1:0] ALUOp_Current,
-    output logic [DATA_W-1:0] WB_Data //Result After the last MUX
+    output logic [DATA_W-1:0] WB_Data, //Result After the last MUX
+    
+    output logic [4:0] reg_num, //número do registrador que foi escrito
+    output logic [31:0] reg_data   //valor que foi escrito no registrador
     );
 
 logic [PC_W-1:0] PC, PCPlus4, Next_PC;
@@ -104,8 +107,15 @@ mem_wb_reg D;
 
     // //Register File
     assign opcode = A.Curr_Instr[6:0];
+    logic [4:1]reg_n;
+    logic [31:0]reg_d;
+
     RegFile rf(clk, reset, D.RegWrite, D.rd, A.Curr_Instr[19:15], A.Curr_Instr[24:20],
-            WRMuxResult, Reg1, Reg2);
+            WRMuxResult, Reg1, Reg2, reg_n, reg_d);
+
+    assign reg_num = reg_n;
+    assign reg_data = reg_d;
+
     // //sign extend
     imm_Gen Ext_Imm (A.Curr_Instr,ExtImm);
 

@@ -18,11 +18,13 @@ module RegFile#(
          
    // Outputs
    output logic [DATA_WIDTH-1:0] rg_rd_data1, //content of reg_file[rg_rd_addr1] is loaded into
-   output logic [DATA_WIDTH-1:0] rg_rd_data2 //content of reg_file[rg_rd_addr2] is loaded into
+   output logic [DATA_WIDTH-1:0] rg_rd_data2, //content of reg_file[rg_rd_addr2] is loaded into
+
+   output logic [ADDRESS_WIDTH-1:0] reg_num, //número do registrador que foi escrito
+   output logic [DATA_WIDTH-1:0] reg_data   //valor que foi escrito no registrador
    );
 
 integer 	 i;
-integer      fd;
 
 logic [DATA_WIDTH-1:0] register_file [NUM_REGS-1:0];
 
@@ -33,14 +35,12 @@ begin
             register_file [i] <= 0;
     else if( rst ==1'b0 && rg_wrt_en ==1'b1 ) begin
         register_file [ rg_wrt_dest ] <= rg_wrt_data;
-        fd = $fopen("result.txt", "a");
-        $fwrite(fd, "Register [%d] written with value: [%X] | [%d]\n", rg_wrt_dest, rg_wrt_data, rg_wrt_data);
-        $fclose(fd);
+        assign reg_num = rg_wrt_dest;
+        assign reg_data = rg_wrt_data;
     end
 end
 
 assign rg_rd_data1 = register_file[rg_rd_addr1];
 assign rg_rd_data2 = register_file[rg_rd_addr2];
-
 
 endmodule

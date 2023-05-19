@@ -3,7 +3,10 @@
 module riscv #(
     parameter DATA_W = 32)
     (input logic clk, reset, // clock and reset signals
-    output logic [31:0] WB_Data// The ALU_Result
+    output logic [31:0] WB_Data, // The ALU_Result
+
+    output logic [4:0] reg_num,
+    output logic [31:0] reg_data
     );
 
 logic [6:0] opcode;
@@ -20,6 +23,6 @@ logic [3:0] Operation;
     
     ALUController ac(ALUop_Reg, Funct7, Funct3, Operation);
 
-    Datapath dp(clk, reset, RegWrite , MemtoReg, ALUSrc , MemWrite, MemRead, Branch, JalrSel, ALUop, RWSel, Operation, opcode, Funct7, Funct3, ALUop_Reg, WB_Data);
+    Datapath dp(clk, reset, RegWrite , MemtoReg, ALUSrc , MemWrite, MemRead, Branch, JalrSel, ALUop, RWSel, Operation, opcode, Funct7, Funct3, ALUop_Reg, WB_Data, reg_num, reg_data);
         
 endmodule
