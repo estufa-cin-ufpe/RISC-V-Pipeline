@@ -2,31 +2,38 @@
 
 module tb_top;
 
-//clock and reset signal declaration
+  //clock and reset signal declaration
   logic tb_clk, reset;
   logic [31:0] tb_WB_Data;
+  logic [ 4:0] reg_num;
+  logic [31:0] reg_data;
 
-//gerador de clock e reset
   localparam CLKPERIOD = 10;
   localparam CLKDELAY = CLKPERIOD / 2;
 
-  initial begin
-     tb_clk = 0;
-     reset = 1;
-     #(CLKPERIOD);
-     reset = 0;
-  end
-
-  always #(CLKDELAY) tb_clk = ~tb_clk;
-  
-  riscv riscV(
+  riscv riscV (
       .clk(tb_clk),
       .reset(reset),
-      .WB_Data(tb_WB_Data)      
-     );
+      .WB_Data(tb_WB_Data),
+      .reg_num(reg_num),
+      .reg_data(reg_data)
+  );
 
   initial begin
+    tb_clk = 0;
+    reset  = 1;
+    #(CLKPERIOD);
+    reset = 0;
+
+    $monitor($time, ": Register [%d] written with value: [%X] | [%d]\n", reg_num, reg_data,
+             reg_data);
+
     #(CLKPERIOD * 50);
+
     $stop;
-   end
+  end
+
+  //clock generator
+  always #(CLKDELAY) tb_clk = ~tb_clk;
+
 endmodule
