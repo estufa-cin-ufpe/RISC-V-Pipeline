@@ -39,7 +39,6 @@ module datamemory #(
   logic [31:0] Datain;
   logic [31:0] Dataout;
   logic Wr;
-  integer fd;
 
   initial begin
     assign raddress = {{22{1'b0}}, a};
