@@ -5,8 +5,14 @@ module tb_top;
   //clock and reset signal declaration
   logic tb_clk, reset;
   logic [31:0] tb_WB_Data;
-  logic [ 4:0] reg_num;
+
+  logic [4:0] reg_num;
   logic [31:0] reg_data;
+  logic wr;
+  logic rd;
+  logic [8:0] addr;
+  logic [31:0] wr_data;
+  logic [31:0] rd_data;
 
   localparam CLKPERIOD = 10;
   localparam CLKDELAY = CLKPERIOD / 2;
@@ -16,7 +22,12 @@ module tb_top;
       .reset(reset),
       .WB_Data(tb_WB_Data),
       .reg_num(reg_num),
-      .reg_data(reg_data)
+      .reg_data(reg_data),
+      .wr(wr),
+      .rd(rd),
+      .addr(addr),
+      .wr_data(wr_data),
+      .rd_data(rd_data)
   );
 
   initial begin
@@ -31,6 +42,14 @@ module tb_top;
     #(CLKPERIOD * 50);
 
     $stop;
+  end
+
+  always_comb begin
+    if (wr && ~rd)
+      $display($time, ": Memory [%d] written with value: [%X] | [%d]\n", addr, wr_data, wr_data);
+
+    else if (rd && ~wr)
+      $display($time, ": Memory [%d] read with value: [%X] | [%d]\n", addr, rd_data, rd_data);
   end
 
   //clock generator
