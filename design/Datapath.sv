@@ -58,8 +58,15 @@ module Datapath #(
     output logic [1:0] ALUOp_Current,
     output logic [DATA_W-1:0] WB_Data, //Result After the last MUX
     
+    // Para depuração no tesbench:
     output logic [4:0] reg_num, //número do registrador que foi escrito
-    output logic [31:0] reg_data   //valor que foi escrito no registrador
+    output logic [DATA_W-1:0] reg_data,   //valor que foi escrito no registrador
+
+    output logic wr, // write enable
+    output logic reade, // read enable
+    output logic [DM_ADDRESS-1:0] addr, // address
+    output logic [DATA_W-1:0] wr_data, // write data
+    output logic [DATA_W-1:0] rd_data // read data
     );
 
 logic [PC_W-1:0] PC, PCPlus4, Next_PC;
@@ -107,7 +114,7 @@ mem_wb_reg D;
 
     // //Register File
     assign opcode = A.Curr_Instr[6:0];
-    logic [4:1]reg_n;
+    logic [4:0]reg_n;
     logic [31:0]reg_d;
 
     RegFile rf(clk, reset, D.RegWrite, D.rd, A.Curr_Instr[19:15], A.Curr_Instr[24:20],
@@ -222,6 +229,12 @@ mem_wb_reg D;
 
     // // // // Data memory 
 	datamemory data_mem (clk, C.MemRead, C.MemWrite, C.Alu_Result[8:0], C.RD_Two, C.func3, ReadData);
+
+    assign wr = C.MemWrite;
+    assign reade = C.MemRead;
+    assign addr = C.Alu_Result[8:0];
+    assign wr_data = C.RD_Two;
+    assign rd_data = ReadData;
 
 // MEM_WB_Reg D;
     always @(posedge clk) 
