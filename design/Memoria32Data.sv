@@ -29,7 +29,7 @@ module Memoria32Data
      input  wire  Clk,         
      input  wire  [31:0]Datain,
      output wire  [31:0]Dataout,
-     input  wire  Wr
+     input  wire  [3:0]Wr
     );
     
     wire [15:0]readUsefullAddress = raddress[15:0]; 
@@ -69,15 +69,12 @@ module Memoria32Data
     
     //Bancos de memórias (cada banco possui 65536 bytes)
     //0
-    ramOnChipData #(.ramSize(65536), .ramWide(8) ) memBlock0 (.clk(Clk), .data(inS0), .radd(addS0), .wadd(waddS0), .wren(Wr), .q(outS0) );
+    ramOnChipData #(.ramSize(65536), .ramWide(8) ) memBlock0 (.clk(Clk), .data(inS0), .radd(addS0), .wadd(waddS0), .wren(Wr[0]), .q(outS0) );
     //1
-    ramOnChipData #(.ramSize(65536), .ramWide(8) ) memBlock1 (.clk(Clk), .data(inS1), .radd(addS1), .wadd(waddS1), .wren(Wr), .q(outS1) ); 
+    ramOnChipData #(.ramSize(65536), .ramWide(8) ) memBlock1 (.clk(Clk), .data(inS1), .radd(addS1), .wadd(waddS1), .wren(Wr[1]), .q(outS1) ); 
     //2
-    ramOnChipData #(.ramSize(65536), .ramWide(8) ) memBlock2 (.clk(Clk), .data(inS2), .radd(addS2), .wadd(waddS2), .wren(Wr), .q(outS2) ); 
+    ramOnChipData #(.ramSize(65536), .ramWide(8) ) memBlock2 (.clk(Clk), .data(inS2), .radd(addS2), .wadd(waddS2), .wren(Wr[2]), .q(outS2) ); 
     //3
-    ramOnChipData #(.ramSize(65536), .ramWide(8) ) memBlock3 (.clk(Clk), .data(inS3), .radd(addS3), .wadd(waddS3), .wren(Wr), .q(outS3) );
+    ramOnChipData #(.ramSize(65536), .ramWide(8) ) memBlock3 (.clk(Clk), .data(inS3), .radd(addS3), .wadd(waddS3), .wren(Wr[3]), .q(outS3) );
         
 endmodule
-    
-    
-    
