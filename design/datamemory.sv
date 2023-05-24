@@ -38,28 +38,18 @@ module datamemory #(
   logic [31:0] waddress;
   logic [31:0] Datain;
   logic [31:0] Dataout;
-  logic Wr;
+  logic [ 3:0] Wr;
 
   initial begin
     assign raddress = {{22{1'b0}}, a};
-    assign waddress = {{22{1'b0}}, a};
-    assign Datain = wd;
-    assign Wr = MemWrite;
+    // o endereço de escrita está de 4 em 4:
+    assign waddress = {{22{1'b0}}, {a[8:2], {2{1'b0}}}};
   end
-
-  Memoria32Data mem32 (
-      .raddress(raddress),
-      .waddress(waddress),
-      .Clk(~clk),
-      .Datain(Datain),
-      .Dataout(Dataout),
-      .Wr(Wr)
-  );
-
-  logic [DATA_W-1:0] mem[(2**DM_ADDRESS)-1:0];
 
   always_comb begin
     if (MemRead) begin
+      assign Wr = {4{MemWrite}};
+      assign Datain = wd;
       case (Funct3)
         3'b000:  //LB
         rd <= {Dataout[7] ? 24'hFFFFFF : 24'b0, Dataout[7:0]};
@@ -73,16 +63,36 @@ module datamemory #(
         rd <= {16'b0, Dataout[15:0]};
         default: rd <= Dataout;
       endcase
+
     end else if (MemWrite) begin
+      // Aqui mexemos na posição dos bits de acordo com a instrução
+      // Exemplo 1: se for SB no endereço 3, o Wr será 0001 e o Datain será 00000000 00000000 00000000 wd[7:0]
+      // Exemplo 2: se for SB no endereço 2, o Wr será 0010 e o Datain será 00000000 00000000 wd[7:0] 00000000
+      // Exemplo 3: se for SH no endereço 2, o Wr será 0011 e o Datain será 00000000 00000000 wd[15:0]
+      // Exemplo 4: se for SW no endereço 3, o Wr será 1111 e o Datain será wd
+
       case (Funct3)
-        3'b000:  //SB
-        mem[a][7:0] = wd[7:0];
-        3'b001:  //SH
-        mem[a][15:0] = wd[15:0];
-        3'b010:  //SW
-        mem[a] = wd;
-        default: mem[a] = wd;
+        3'b000: begin  //SB
+          assign Wr = (a[1:0]==2'b00) ? 4'b1000 : ((a[1:0]==2'b01) ? 4'b0100 : ((a[1:0]==2'b10) ? 4'b0010 : 4'b0001));
+          assign Datain = (a[1:0]==2'b00) ? {wd[7:0], {24{1'b0}}} : ((a[1:0]==2'b01) ? {{8{1'b0}}, {wd[7:0], {16{1'b0}}}} : ((a[1:0]==2'b10) ? {{16{1'b0}}, {wd[7:0], {8{1'b0}}}} : {{24{1'b0}}, wd[7:0]}));
+        end
+        3'b001: begin  //SH
+          assign Wr = (a[1:0] == 2'b00 || a[1:0] == 2'b01) ? 4'b1100 : 4'b0011;
+          assign Datain = (a[1:0]==2'b00) ? {wd[15:0], {16{1'b0}}} : ((a[1:0]==2'b01) ? {{16{1'b0}}, {wd[15:0], {8{1'b0}}}} : {{24{1'b0}}, wd[15:0]});
+        end
+        default:  //SW
+        assign Wr = 4'b1111;
       endcase
     end
   end
+
+  Memoria32Data mem32 (
+      .raddress(raddress),
+      .waddress(waddress),
+      .Clk(~clk),
+      .Datain(Datain),
+      .Dataout(Dataout),
+      .Wr(Wr)
+  );
+
 endmodule
