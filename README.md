@@ -60,9 +60,3 @@ The following table lists the implemented instructions and their status. The ins
 | 38| `FENCE`     |     ❌     |   ❌   |   ❌   |             |
 | 39| `ECALL`     |     ❌     |   ❌   |   ❌   |             |
 | 40| `EBREAK`    |     ❌     |   ❌   |   ❌   |             |
-| 41| `CSRRW`     |     ❌     |   ❌   |   ❌   |             |
-| 42| `CSRRS`     |     ❌     |   ❌   |   ❌   |             |
-| 43| `CSRRC`     |     ❌     |   ❌   |   ❌   |             |
-| 44| `CSRRWI`    |     ❌     |   ❌   |   ❌   |             |
-| 45| `CSRRSI`    |     ❌     |   ❌   |   ❌   |             |
-| 46| `CSRRCI`    |     ❌     |   ❌   |   ❌   |             |
