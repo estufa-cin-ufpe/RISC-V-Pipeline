@@ -40,14 +40,26 @@ Register [ 9] written with value: [ffffffff] | [4294967295]
 
 ```assembly
 addi x7, x0, 0
-sb x7, 2(x0)
+sb x7, 1(x0)
 lw x9, 0(x0)
-sh x7, 2(x0)
+sh x7, 3(x0)
 lw x8, 0(x0)
 ```
 
 ### Resultado (filtrado do log da simulação)
 
 ```shell
--
+#                   45: Memory [  1] written with value: [00000000] | [         0]
+# 
+#                   50: Register [ 7] written with value: [00000000] | [         0]
+# 
+#                   60: Memory [  0] read with value: [ffff0080] | [4294901888]
+# 
+#                   65: Memory [  3] written with value: [00000000] | [         0]
+# 
+#                   65: Register [ 9] written with value: [ffff0080] | [4294901888]
+# 
+#                   80: Memory [  0] read with value: [00000080] | [       128]
+# 
+#                   85: Register [ 8] written with value: [00000080] | [       128]
 ```
