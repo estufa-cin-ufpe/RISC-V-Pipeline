@@ -44,12 +44,13 @@ module datamemory #(
     assign raddress = {{22{1'b0}}, a};
     // o endereço de escrita está de 4 em 4:
     assign waddress = {{22{1'b0}}, {a[8:2], {2{1'b0}}}};
-    assign Wr = {4{MemWrite}};
+    //assign Wr = {4{MemWrite}};
     assign Datain = wd;
   end
 
   always_comb begin
     if (MemRead) begin
+      assign Wr = 4'b0000;
       case (Funct3)
         3'b000:  //LB
         rd <= {Dataout[7] ? 24'hFFFFFF : 24'b0, Dataout[7:0]};
@@ -73,15 +74,17 @@ module datamemory #(
 
       case (Funct3)
         3'b000: begin  //SB
-          assign Wr = (a[1:0]==2'b00) ? 4'b1000 : ((a[1:0]==2'b10) ? 4'b0100 : ((a[1:0]==2'b01) ? 4'b0010 : 4'b0001));
-          assign Datain = (a[1:0]==2'b00) ? {wd[7:0], {24{1'b0}}} : ((a[1:0]==2'b10) ? {{8{1'b0}}, {wd[7:0], {16{1'b0}}}} : ((a[1:0]==2'b01) ? {{16{1'b0}}, {wd[7:0], {8{1'b0}}}} : {{24{1'b0}}, wd[7:0]}));
+          assign Wr = (a[1:0]==2'b00) ? 4'b0001 : ((a[1:0]==2'b01) ? 4'b0010 : ((a[1:0]==2'b10) ? 4'b0100 : 4'b1000));
+          assign Datain = (a[1:0]==2'b00) ? {{24{1'b0}}, wd[7:0]} : ((a[1:0]==2'b01) ? {{16{1'b0}}, {wd[7:0], {8{1'b0}}}} : ((a[1:0]==2'b10) ? {{8{1'b0}}, {wd[7:0], {16{1'b0}}}} : {wd[7:0], {24{1'b0}}}));
         end
         3'b001: begin  //SH
-          assign Wr = (a[1:0] == 2'b00 || a[1:0] == 2'b10) ? 4'b1100 : 4'b0011;
-          assign Datain = (a[1:0]==2'b00) || (a[1:0]==2'b10) ? {wd[15:0], {16{1'b0}}} : {{16{1'b0}}, wd[15:0]};
+          assign Wr = (a[1:0] == 2'b00 || a[1:0] == 2'b01) ? 4'b0011 : 4'b1100;
+          assign Datain = (a[1:0]==2'b00) || (a[1:0]==2'b01) ? {{16{1'b0}}, wd[15:0]} : {wd[15:0], {16{1'b0}}};
         end
-        default:  //SW
-        assign Wr = 4'b1111;
+        default: begin  //SW
+          assign Wr = 4'b1111;
+          assign Datain = wd;
+        end
       endcase
     end
   end
