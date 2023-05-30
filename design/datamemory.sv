@@ -44,7 +44,6 @@ module datamemory #(
     assign raddress = {{22{1'b0}}, a};
     // o endereço de escrita está de 4 em 4:
     assign waddress = {{22{1'b0}}, {a[8:2], {2{1'b0}}}};
-    //assign Wr = {4{MemWrite}};
     assign Datain = wd;
   end
 
