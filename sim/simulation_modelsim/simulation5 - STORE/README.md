@@ -49,17 +49,5 @@ lw x8, 0(x0)
 ### Resultado (filtrado do log da simulação)
 
 ```shell
-#                   45: Memory [  2] written with value: [00000000] | [         0]
-# 
-#                   50: Register [ 7] written with value: [00000000] | [         0]
-# 
-#                   60: Memory [  0] read with value: [ff00aa80] | [4278233728]
-# 
-#                   65: Memory [  2] written with value: [00000000] | [         0]
-# 
-#                   65: Register [ 9] written with value: [ff00aa80] | [4278233728]
-# 
-#                   80: Memory [  0] read with value: [0000aa80] | [     43648]
-# 
-#                   85: Register [ 8] written with value: [0000aa80] | [     43648]
+-
 ```
