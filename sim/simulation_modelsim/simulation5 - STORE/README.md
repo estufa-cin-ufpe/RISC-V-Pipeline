@@ -15,7 +15,6 @@ addi x7, x0, -1
 sw x7, 0(x0)
 lw x9, 0(x0)
 ```
-
 ### Registradores após cada instrução
 
 O arquivo gerado é sempre criado/atualizado quando algum registrador é alterado. Ele possui o seguinte formato:
@@ -30,4 +29,37 @@ Onde `x` é o número do registrador, `hhhhhhhh` é o valor em hexadecimal guard
 ```shell
 Register [ 7] written with value: [ffffffff] | [4294967295]
 Register [ 9] written with value: [ffffffff] | [4294967295]
+```
+
+## SB e SH
+
+- [sb-sh.mif](sb-sh.mif)
+- [data.mif](data.mif)
+
+### Instruções testadas
+
+```assembly
+addi x7, x0, 0
+sb x7, 2(x0)
+lw x9, 0(x0)
+sh x7, 2(x0)
+lw x8, 0(x0)
+```
+
+### Resultado (filtrado do log da simulação)
+
+```shell
+#                   45: Memory [  2] written with value: [00000000] | [         0]
+# 
+#                   50: Register [ 7] written with value: [00000000] | [         0]
+# 
+#                   60: Memory [  0] read with value: [ff00aa80] | [4278233728]
+# 
+#                   65: Memory [  2] written with value: [00000000] | [         0]
+# 
+#                   65: Register [ 9] written with value: [ff00aa80] | [4278233728]
+# 
+#                   80: Memory [  0] read with value: [0000aa80] | [     43648]
+# 
+#                   85: Register [ 8] written with value: [0000aa80] | [     43648]
 ```
