@@ -8,6 +8,7 @@ module tb_top;
 
   logic [4:0] reg_num;
   logic [31:0] reg_data;
+  logic reg_write_sig;
   logic wr;
   logic rd;
   logic [8:0] addr;
@@ -23,6 +24,7 @@ module tb_top;
       .WB_Data(tb_WB_Data),
       .reg_num(reg_num),
       .reg_data(reg_data),
+      .reg_write_sig(reg_write_sig),
       .wr(wr),
       .rd(rd),
       .addr(addr),
@@ -36,9 +38,6 @@ module tb_top;
     #(CLKPERIOD);
     reset = 0;
 
-    $monitor($time, ": Register [%d] written with value: [%X] | [%d]\n", reg_num, reg_data,
-             reg_data);
-
     #(CLKPERIOD * 50);
 
     $stop;
@@ -50,6 +49,11 @@ module tb_top;
 
     else if (rd && ~wr)
       $display($time, ": Memory [%d] read with value: [%X] | [%d]\n", addr, rd_data, rd_data);
+
+    if (reg_write_sig)
+      $display(
+          $time, ": Register [%d] written with value: [%X] | [%d]\n", reg_num, reg_data, reg_data
+      );
   end
 
   //clock generator

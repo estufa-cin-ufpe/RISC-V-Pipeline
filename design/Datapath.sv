@@ -61,6 +61,7 @@ module Datapath #(
     // Para depuração no tesbench:
     output logic [4:0] reg_num, //número do registrador que foi escrito
     output logic [DATA_W-1:0] reg_data,   //valor que foi escrito no registrador
+    output logic reg_write_sig, //sinal de escrita no registrador
 
     output logic wr, // write enable
     output logic reade, // read enable
@@ -114,14 +115,13 @@ mem_wb_reg D;
 
     // //Register File
     assign opcode = A.Curr_Instr[6:0];
-    logic [4:0]reg_n;
-    logic [31:0]reg_d;
 
     RegFile rf(clk, reset, D.RegWrite, D.rd, A.Curr_Instr[19:15], A.Curr_Instr[24:20],
-            WRMuxResult, Reg1, Reg2, reg_n, reg_d);
+            WRMuxResult, Reg1, Reg2);
 
-    assign reg_num = reg_n;
-    assign reg_data = reg_d;
+    assign reg_num = D.rd;
+    assign reg_data = WRMuxResult;
+    assign reg_write_sig = D.RegWrite;
 
     // //sign extend
     imm_Gen Ext_Imm (A.Curr_Instr,ExtImm);
