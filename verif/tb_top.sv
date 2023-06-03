@@ -43,18 +43,20 @@ module tb_top;
     $stop;
   end
 
-  always_comb begin
+  always_comb begin : MEMORY
     if (wr && ~rd)
       $display($time, ": Memory [%d] written with value: [%X] | [%d]\n", addr, wr_data, wr_data);
 
     else if (rd && ~wr)
       $display($time, ": Memory [%d] read with value: [%X] | [%d]\n", addr, rd_data, rd_data);
+  end : MEMORY
 
+  always_comb begin : REGISTER
     if (reg_write_sig)
       $display(
           $time, ": Register [%d] written with value: [%X] | [%d]\n", reg_num, reg_data, reg_data
       );
-  end
+  end : REGISTER
 
   //clock generator
   always #(CLKDELAY) tb_clk = ~tb_clk;
