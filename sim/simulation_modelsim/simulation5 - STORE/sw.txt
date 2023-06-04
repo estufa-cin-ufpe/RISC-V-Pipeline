@@ -1,2 +1,0 @@
-Register [ 7] written with value: [ffffffff] | [4294967295]
-Register [ 9] written with value: [ffffffff] | [4294967295]

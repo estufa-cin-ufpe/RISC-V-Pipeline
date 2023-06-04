@@ -1,14 +1,16 @@
-# Resultados obtidos da Simulação 2
+# Simulation Results
 
-Foi realizada uma simulação das instruções presentes no arquivo [instruction.mif](instruction.mif), utilizando o testbench [tb_top](/verif/tb_top.sv) para testar o funcionamento do pipeline. 
+## LB, LH, LW
 
-Além disso, foi introduzido uma memória de dados de 32 bits. A memória de dados é inicializada com o conteúdo do arquivo [data.mif](data.mif).
+We conducted a simulation using the instructions provided in the file [instruction.mif](instruction.mif) and the testbench [tb_top](/verif/tb_top.sv) to evaluate the pipeline's functionality.
 
-O resultado obtido está condizente com o resultado esperado e foi gerado durante a simulação, estando disponível nos arquivos [result.txt](result.txt) e [resultData.txt](resultData.txt).
+Also, a 32-bit data memory was introduced. The data memory is initialized with the contents of the file [data.mif](data.mif).
 
-## Instruções testadas
+The obtained result matches the expected outcome, which can be verified below.
 
-As seguintes instruções foram testadas durante a simulação:
+### Instructions Tested
+
+The simulation included testing the following instructions:
 
 ```assembly
 addi x7,x0,1
@@ -21,61 +23,66 @@ lh x8,0(x6)
 lw x9,0(x6)
 ```
 
-## Registradores após cada instrução
+### Registers/Memory State after each instruction
 
-O arquivo gerado é sempre criado/atualizado quando algum registrador é alterado. Ele possui o seguinte formato:
-
-```shell
-Register [ x] written with value: [hhhhhhhh] | [dddddddd]
-```
-Onde `x` é o número do registrador, `hhhhhhhh` é o valor em hexadecimal guardado no registrador e `dddddddd` é esse mesmo valor em decimal.
-
----
-
+The following information is extracted from the simulation log and can be interpreted as demonstrated in the example below:
 
 ```shell
-Register [ 7] written with value: [00000001] | [         1]
-Register [ 7] written with value: [00000001] | [         1]
-Register [ 2] written with value: [00000004] | [         4]
-Register [ 4] written with value: [00000004] | [         4]
-Register [ 6] written with value: [ffffff8f] | [4294967183]
-Register [ 6] written with value: [00000008] | [         8]
-Register [ 7] written with value: [fffffffb] | [4294967291]
-Register [ 8] written with value: [ffffaafb] | [4294945531]
-Register [ 9] written with value: [0001aafb] | [    109307]
+tt: Register [x] written with value: [hhhhhhhh] | [dddddddd]
+tt: Memory [x] read with value: [hhhhhhhh] | [dddddddd]
 ```
 
-## Operações na memória
-
-O arquivo gerado é sempre criado/atualizado quando algum dado é escrito ou lido da memória. Ele possui o seguinte formato:
-
-```shell
-Read value: [hhhhhhhh] | [bbbbbbbb]
-Write value: [hhhhhhhh] | [bbbbbbbb] on address [ x]
-```
-
-No caso de leitura, `hhhhhhhh` é o valor em hexadecimal lido da memória e `bbbbbbbb` é esse mesmo valor em binário.
-Já quando é feita uma escrita, `hhhhhhhh` é o valor em hexadecimal que será escrito na memória e `bbbbbbbb` é esse mesmo valor em binário. `x` é o endereço da memória onde será escrito o valor.
+In the above example, `tt` represents the simulation time, `x` represents the register/memory address number, `hhhhhhhh` represents the hexadecimal value stored in the register/memory slot, and `dddddddd` represents the same value in decimal.
 
 ---
 
 ```shell
-Read value: [xxxxxxxx] | [xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx]
-Read value: [xxxxxxxx] | [xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx]
-Read value: [ffffffff] | [11111111111111111111111111111111]
-Read value: [ffffffff] | [11111111111111111111111111111111]
-Read value: [ffffff8f] | [11111111111111111111111110001111]
-Read value: [ffffff8f] | [11111111111111111111111110001111]
-Read value: [fffffffb] | [11111111111111111111111111111011]
-Read value: [fffffffb] | [11111111111111111111111111111011]
-Read value: [ffffaafb] | [11111111111111111010101011111011]
-Read value: [ffffaafb] | [11111111111111111010101011111011]
-Read value: [0001aafb] | [00000000000000011010101011111011]
+45: Register [ 7] written with value: [00000001] | [         1]
+55: Register [ 2] written with value: [00000004] | [         4]
+65: Memory [  1] read with value: [xxxxxxxx] | [         x]
+65: Register [ 4] written with value: [00000004] | [         4]
+65: Memory [  1] read with value: [ffffffff] | [4294967295]
+70: Memory [  1] read with value: [ffffff8f] | [4294967183]
+75: Register [ 6] written with value: [ffffff8f] | [4294967183]
+85: Register [ 6] written with value: [00000008] | [         8]
+85: Memory [  8] read with value: [ffffff8f] | [4294967183]
+85: Memory [  8] read with value: [fffffffb] | [4294967291]
+95: Register [ 7] written with value: [fffffffb] | [4294967291]
+95: Memory [  8] read with value: [ffffaafb] | [4294945531]
+105: Register [ 8] written with value: [ffffaafb] | [4294945531]
+105: Memory [  8] read with value: [0001aafb] | [    109307]
+115: Register [ 9] written with value: [0001aafb] | [    109307]
 ```
 
-Note que não são todas as leituras registradas que chegam aos registradores. Este arquivo serve para acompanhar o estado do módulo da memória, não para acompanhar o estado dos registradores.
+## LBU, LHU
+- [lbulhu.mif](lbulhu.mif)
 
-## Teste das instruções `LBU` e `LHU`
-Foi realizada a simulação das instruções contidas no arquivo [instruction2.mif](instruction2.mif), que são, em suma, as mesmas instruções da simulação anterior, porém com as instruções `LBU` e `LHU`, em vez de `LB` e `LH`, respectivamente.
+### Instructions Tested
 
-O resultado obtido está condizente com o resultado esperado e foi gerado durante a simulação, estando disponível no arquivo [resultU.txt](resultU.txt).
+```assembly
+addi x7,x0,1
+addi x2,x0,4
+or x4,x2,x0
+lb x6,0(x7)
+add x6,x4,x0
+lbu x7,0(x6)
+lhu x8,0(x6)
+```
+
+### Registers/Memory State after each instruction
+
+```shell
+45: Register [ 7] written with value: [00000001] | [         1]
+55: Register [ 2] written with value: [00000004] | [         4]
+65: Memory [  1] read with value: [xxxxxxxx] | [         x]
+65: Register [ 4] written with value: [00000004] | [         4]
+65: Memory [  1] read with value: [ffffffff] | [4294967295]
+70: Memory [  1] read with value: [ffffff8f] | [4294967183]
+75: Register [ 6] written with value: [ffffff8f] | [4294967183]
+85: Register [ 6] written with value: [00000008] | [         8]
+85: Memory [  8] read with value: [ffffff8f] | [4294967183]
+85: Memory [  8] read with value: [000000fb] | [       251]
+95: Register [ 7] written with value: [000000fb] | [       251]
+95: Memory [  8] read with value: [0000aafb] | [     43771]
+105: Register [ 8] written with value: [0000aafb] | [     43771]
+```

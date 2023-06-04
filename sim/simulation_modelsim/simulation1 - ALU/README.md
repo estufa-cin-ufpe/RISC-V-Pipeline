@@ -1,12 +1,14 @@
-# Resultados obtidos da Simulação 1
+# Simulation Results
 
-Foi realizada uma simulação das instruções presentes no arquivo [instruction.mif](instruction.mif), utilizando o testbench [tb_top](/verif/tb_top.sv) para testar o funcionamento do pipeline. 
+## ADDI, OR, ADD, SLL, SRL, SRA, SLT, SLTU, SLTI, SLTIU, SLLI, SRLI, SRAI, XORI, ORI, ANDI, XOR
 
-O resultado obtido está condizente com o resultado esperado e foi gerado durante a simulação, estando disponível no arquivo [result.txt](result.txt).
+We conducted a simulation using the instructions provided in the file [instruction.mif](instruction.mif) and the testbench [tb_top](/verif/tb_top.sv) to evaluate the pipeline's functionality.
 
-## Instruções testadas
+The obtained result matches the expected outcome, which can be verified below.
 
-As seguintes instruções foram testadas durante a simulação:
+### Instructions Tested
+
+The simulation included testing the following instructions:
 
 ```assembly
 addi x0,x0,0
@@ -38,56 +40,53 @@ andi x8,x1,10
 xor x9,x1,x2
 ```
 
+### Registers after each instruction
 
-## Registradores após cada instrução
-
-O arquivo gerado é sempre criado/atualizado quando algum registrador é alterado. Ele possui o seguinte formato:
+The following information is extracted from the simulation log and can be interpreted as demonstrated in the example below:
 
 ```shell
-Register [ x] written with value: [hhhhhhhh] | [dddddddd]
+tt: Register [x] written with value: [hhhhhhhh] | [dddddddd]
 ```
-Onde `x` é o número do registrador, `hhhhhhhh` é o valor em hexadecimal guardado no registrador e `dddddddd` é esse mesmo valor em decimal.
+
+In the above example, `tt` represents the simulation time, `x` represents the register number, `hhhhhhhh` represents the hexadecimal value stored in the register, and `dddddddd` represents the same value in decimal.
 
 ---
 
-
 ```shell
-Register [ 0] written with value: [00000000] | [         0]
-Register [ 0] written with value: [00000000] | [         0]
-Register [ 1] written with value: [00000008] | [         8]
-Register [ 2] written with value: [00000004] | [         4]
-Register [ 3] written with value: [0000000c] | [        12]
-Register [ 4] written with value: [00000004] | [         4]
-Register [ 6] written with value: [00000008] | [         8]
-Register [ 4] written with value: [00000002] | [         2]
-Register [ 5] written with value: [fffffffe] | [4294967294]
-Register [18] written with value: [00000020] | [        32]
-Register [19] written with value: [3fffffff] | [1073741823]
-Register [20] written with value: [ffffffff] | [4294967295]
-Register [21] written with value: [00000000] | [         0]
-Register [22] written with value: [00000001] | [         1]
-Register [23] written with value: [00000000] | [         0]
-Register [24] written with value: [00000001] | [         1]
-Register [25] written with value: [00000000] | [         0]
-Register [26] written with value: [00000001] | [         1]
-Register [ 5] written with value: [fffffffc] | [4294967292]
-Register [27] written with value: [00000001] | [         1]
-Register [28] written with value: [00000001] | [         1]
-Register [29] written with value: [fffffff8] | [4294967288]
-Register [30] written with value: [7ffffffe] | [2147483646]
-Register [31] written with value: [fffffffe] | [4294967294]
-Register [ 6] written with value: [00000002] | [         2]
-Register [ 7] written with value: [0000000a] | [        10]
-Register [ 8] written with value: [00000008] | [         8]
-Register [ 9] written with value: [0000000c] | [        12]
+45: Register [ 0] written with value: [00000000] | [         0]
+55: Register [ 1] written with value: [00000008] | [         8]
+65: Register [ 2] written with value: [00000004] | [         4]
+75: Register [ 3] written with value: [0000000c] | [        12]
+85: Register [ 4] written with value: [00000004] | [         4]
+95: Register [ 6] written with value: [00000008] | [         8]
+105: Register [ 4] written with value: [00000002] | [         2]
+115: Register [ 5] written with value: [fffffffe] | [4294967294]
+125: Register [18] written with value: [00000020] | [        32]
+135: Register [19] written with value: [3fffffff] | [1073741823]
+145: Register [20] written with value: [ffffffff] | [4294967295]
+155: Register [21] written with value: [00000000] | [         0]
+165: Register [22] written with value: [00000001] | [         1]
+175: Register [23] written with value: [00000000] | [         0]
+185: Register [24] written with value: [00000001] | [         1]
+195: Register [25] written with value: [00000000] | [         0]
+205: Register [26] written with value: [00000001] | [         1]
+215: Register [ 5] written with value: [fffffffc] | [4294967292]
+225: Register [27] written with value: [00000001] | [         1]
+235: Register [28] written with value: [00000001] | [         1]
+245: Register [29] written with value: [fffffff8] | [4294967288]
+255: Register [30] written with value: [7ffffffe] | [2147483646]
+265: Register [31] written with value: [fffffffe] | [4294967294]
+275: Register [ 6] written with value: [00000002] | [         2]
+285: Register [ 7] written with value: [0000000a] | [        10]
+295: Register [ 8] written with value: [00000008] | [         8]
+305: Register [ 9] written with value: [0000000c] | [        12]
 ```
-# Resultados obtidos da Simulação 1.2
 
-Foi realizada uma simulação das instruções presentes no arquivo [luiandsub.mif](luiandsub.mif), utilizando o testbench [tb_top](/verif/tb_top.sv) para testar o funcionamento do pipeline.
+## SUB, AND, LUI
 
-O resultado obtido está condizente com o resultado esperado e foi gerado durante a simulação, estando disponível no arquivo [result-lui.txt](result-lui.txt).
+- [luiandsub.mif](luiandsub.mif)
 
-## Instruções testadas
+### Instructions Tested
 
 ```assembly
 addi x1,x0,8
@@ -96,12 +95,11 @@ and x7,x6,x1
 lui x6,3
 ```
 
-## Registradores após cada instrução
+### Registers after each instruction
 
 ```shell
-Register [ 1] written with value: [00000008] | [         8]
-Register [ 1] written with value: [00000008] | [         8]
-Register [ 6] written with value: [fffffff8] | [4294967288]
-Register [ 7] written with value: [00000008] | [         8]
-Register [ 6] written with value: [00003000] | [     12288]
+45: Register [ 1] written with value: [00000008] | [         8]
+55: Register [ 6] written with value: [fffffff8] | [4294967288]
+65: Register [ 7] written with value: [00000008] | [         8]
+75: Register [ 6] written with value: [00003000] | [     12288]
 ```

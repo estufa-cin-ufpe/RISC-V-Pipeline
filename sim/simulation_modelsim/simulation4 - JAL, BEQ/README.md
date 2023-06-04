@@ -1,14 +1,14 @@
-# Resultados obtidos da Simulação 4
+# Simulation Results
 
-## BEQ taken
+## JAL, BEQ (taken)
 
-Foi realizada uma simulação das instruções presentes no arquivo [beqtaken.mif](beqtaken.mif), utilizando o testbench [tb_top](/verif/tb_top.sv) para testar o funcionamento do pipeline. 
+We conducted a simulation using the instructions provided in the file [beqtaken.mif](beqtaken.mif) and the testbench [tb_top](/verif/tb_top.sv) to evaluate the pipeline's functionality.
 
-O resultado obtido está condizente com o resultado esperado e foi gerado durante a simulação, estando disponível no arquivo [beqtaken.txt](beqtaken.txt).
+The obtained result matches the expected outcome, which can be verified below.
 
-### Instruções testadas
+### Instructions Tested
 
-As seguintes instruções foram testadas durante a simulação:
+The simulation included testing the following instructions:
 
 ```assembly
 addi x7, x0, 1
@@ -22,48 +22,47 @@ beq x7, x7, -8
 or x4, x2, x0
 ```
 
-### Registradores após cada instrução
+### Registers after each instruction
 
-O arquivo gerado é sempre criado/atualizado quando algum registrador é alterado. Ele possui o seguinte formato:
+The following information is extracted from the simulation log and can be interpreted as demonstrated in the example below:
 
 ```shell
-Register [ x] written with value: [hhhhhhhh] | [dddddddd]
+tt: Register [x] written with value: [hhhhhhhh] | [dddddddd]
 ```
-Onde `x` é o número do registrador, `hhhhhhhh` é o valor em hexadecimal guardado no registrador e `dddddddd` é esse mesmo valor em decimal.
+
+In the above example, `tt` represents the simulation time, `x` represents the register number, `hhhhhhhh` represents the hexadecimal value stored in the register, and `dddddddd` represents the same value in decimal.
 
 ---
 
-
 ```shell
-Register [ 7] written with value: [00000001] | [         1]
-Register [ 2] written with value: [00000004] | [         4]
-Register [10] written with value: [0000000c] | [        12]
-Register [ 6] written with value: [00000004] | [         4]
-Register [ 7] written with value: [00000001] | [         1]
-Register [ 8] written with value: [00000002] | [         2]
-Register [ 7] written with value: [00000001] | [         1]
-Register [ 8] written with value: [00000002] | [         2]
-Register [ 7] written with value: [00000001] | [         1]
-Register [ 8] written with value: [00000002] | [         2]
-Register [ 7] written with value: [00000001] | [         1]
-Register [ 8] written with value: [00000002] | [         2]
-Register [ 7] written with value: [00000001] | [         1]
-Register [ 8] written with value: [00000002] | [         2]
-Register [ 7] written with value: [00000001] | [         1]
-Register [ 8] written with value: [00000002] | [         2]
-Register [ 7] written with value: [00000001] | [         1]
-Register [ 8] written with value: [00000002] | [         2]
-Register [ 7] written with value: [00000001] | [         1]
-Register [ 8] written with value: [00000002] | [         2]
-
+45: Register [ 7] written with value: [00000001] | [         1]
+55: Register [ 2] written with value: [00000004] | [         4]
+65: Register [10] written with value: [0000000c] | [        12]
+95: Register [ 6] written with value: [00000004] | [         4]
+105: Register [ 7] written with value: [00000001] | [         1]
+115: Register [ 8] written with value: [00000002] | [         2]
+155: Register [ 7] written with value: [00000001] | [         1]
+165: Register [ 8] written with value: [00000002] | [         2]
+205: Register [ 7] written with value: [00000001] | [         1]
+215: Register [ 8] written with value: [00000002] | [         2]
+255: Register [ 7] written with value: [00000001] | [         1]
+265: Register [ 8] written with value: [00000002] | [         2]
+305: Register [ 7] written with value: [00000001] | [         1]
+315: Register [ 8] written with value: [00000002] | [         2]
+355: Register [ 7] written with value: [00000001] | [         1]
+365: Register [ 8] written with value: [00000002] | [         2]
+405: Register [ 7] written with value: [00000001] | [         1]
+415: Register [ 8] written with value: [00000002] | [         2]
+455: Register [ 7] written with value: [00000001] | [         1]
+465: Register [ 8] written with value: [00000002] | [         2]
+505: Register [ 7] written with value: [00000001] | [         1]
 ```
 
-## BEQ not taken
+## BEQ (not taken)
 
 - [beqntaken.mif](beqntaken.mif)
-- [beqntaken.txt](beqntaken.txt)
 
-### Instruções testadas
+### Instructions Tested
 
 ```assembly
 addi x7, x0, 1
@@ -77,42 +76,279 @@ beq x8, x7, -8
 or x4, x2, x0
 ```
 
-### Registradores após cada instrução
+### Registers after each instruction
 
 ```shell
-Register [ 7] written with value: [00000001] | [         1]
-Register [ 2] written with value: [00000004] | [         4]
-Register [10] written with value: [0000000c] | [        12]
-Register [ 6] written with value: [00000004] | [         4]
-Register [ 7] written with value: [00000001] | [         1]
-Register [ 8] written with value: [00000002] | [         2]
-Register [ 4] written with value: [00000004] | [         4]
+45: Register [ 7] written with value: [00000001] | [         1]
+55: Register [ 2] written with value: [00000004] | [         4]
+65: Register [10] written with value: [0000000c] | [        12]
+95: Register [ 6] written with value: [00000004] | [         4]
+105: Register [ 7] written with value: [00000001] | [         1]
+115: Register [ 8] written with value: [00000002] | [         2]
+135: Register [ 4] written with value: [00000004] | [         4]
 ```
 
-## BNE taken
+## BNE (taken)
 - [bnetaken.mif](bnetaken.mif)
-- [bnetaken.txt](bnetaken.txt)
 
-Note que é a mesma configuração do BEQ not taken, mas o resultado é diferente.
+### Instructions Tested
 
-## BLT taken
+```assembly
+addi x7, x0, 1
+addi x2, x0, 4
+jal x10, 8
+or x4, x2, x0
+add x6, x4, x0
+addi x7, x0, 1
+addi x8, x0, 2
+bne x8, x7, -8
+or x4, x2, x0
+```
+
+### Registers after each instruction
+
+```shell
+45: Register [ 7] written with value: [00000001] | [         1]
+55: Register [ 2] written with value: [00000004] | [         4]
+65: Register [10] written with value: [0000000c] | [        12]
+95: Register [ 6] written with value: [00000004] | [         4]
+105: Register [ 7] written with value: [00000001] | [         1]
+115: Register [ 8] written with value: [00000002] | [         2]
+155: Register [ 7] written with value: [00000001] | [         1]
+165: Register [ 8] written with value: [00000002] | [         2]
+205: Register [ 7] written with value: [00000001] | [         1]
+215: Register [ 8] written with value: [00000002] | [         2]
+255: Register [ 7] written with value: [00000001] | [         1]
+265: Register [ 8] written with value: [00000002] | [         2]
+305: Register [ 7] written with value: [00000001] | [         1]
+315: Register [ 8] written with value: [00000002] | [         2]
+355: Register [ 7] written with value: [00000001] | [         1]
+365: Register [ 8] written with value: [00000002] | [         2]
+405: Register [ 7] written with value: [00000001] | [         1]
+415: Register [ 8] written with value: [00000002] | [         2]
+455: Register [ 7] written with value: [00000001] | [         1]
+465: Register [ 8] written with value: [00000002] | [         2]
+505: Register [ 7] written with value: [00000001] | [         1]
+```
+
+## BLT (taken)
 - [blttaken.mif](blttaken.mif)
-- [blttaken.txt](blttaken.txt)
 
-## BGE taken
+### Instructions Tested
+
+```assembly
+addi x7, x0, 1
+addi x2, x0, 4
+jal x10, 8
+or x4, x2, x0
+add x6, x4, x0
+addi x7, x0, 2
+addi x8, x0, 1
+blt x7, x8, -8
+or x4, x2, x0
+```
+
+### Registers after each instruction
+
+```shell
+45: Register [ 7] written with value: [00000001] | [         1]
+55: Register [ 2] written with value: [00000004] | [         4]
+65: Register [10] written with value: [0000000c] | [        12]
+95: Register [ 6] written with value: [00000004] | [         4]
+105: Register [ 7] written with value: [00000002] | [         2]
+115: Register [ 8] written with value: [00000001] | [         1]
+155: Register [ 7] written with value: [00000002] | [         2]
+165: Register [ 8] written with value: [00000001] | [         1]
+205: Register [ 7] written with value: [00000002] | [         2]
+215: Register [ 8] written with value: [00000001] | [         1]
+255: Register [ 7] written with value: [00000002] | [         2]
+265: Register [ 8] written with value: [00000001] | [         1]
+305: Register [ 7] written with value: [00000002] | [         2]
+315: Register [ 8] written with value: [00000001] | [         1]
+355: Register [ 7] written with value: [00000002] | [         2]
+365: Register [ 8] written with value: [00000001] | [         1]
+405: Register [ 7] written with value: [00000002] | [         2]
+415: Register [ 8] written with value: [00000001] | [         1]
+455: Register [ 7] written with value: [00000002] | [         2]
+465: Register [ 8] written with value: [00000001] | [         1]
+505: Register [ 7] written with value: [00000002] | [         2]
+```
+
+## BGE (taken)
 - [bgetaken.mif](bgetaken.mif)
-- [bgetaken.txt](bgetaken.txt)
 
-Note que é a mesma configuração do BLT taken, mas com os registradores invertidos.
+### Instructions Tested
 
-## BLTU taken
+```assembly
+addi x7, x0, 1
+addi x2, x0, 4
+jal x10, 8
+or x4, x2, x0
+add x6, x4, x0
+addi x7, x0, 2
+addi x8, x0, 1
+bge x8, x7, -8
+or x4, x2, x0
+```
+
+### Registers after each instruction
+
+```shell
+45: Register [ 7] written with value: [00000001] | [         1]
+55: Register [ 2] written with value: [00000004] | [         4]
+65: Register [10] written with value: [0000000c] | [        12]
+95: Register [ 6] written with value: [00000004] | [         4]
+105: Register [ 7] written with value: [00000002] | [         2]
+115: Register [ 8] written with value: [00000001] | [         1]
+155: Register [ 7] written with value: [00000002] | [         2]
+165: Register [ 8] written with value: [00000001] | [         1]
+205: Register [ 7] written with value: [00000002] | [         2]
+215: Register [ 8] written with value: [00000001] | [         1]
+255: Register [ 7] written with value: [00000002] | [         2]
+265: Register [ 8] written with value: [00000001] | [         1]
+305: Register [ 7] written with value: [00000002] | [         2]
+315: Register [ 8] written with value: [00000001] | [         1]
+355: Register [ 7] written with value: [00000002] | [         2]
+365: Register [ 8] written with value: [00000001] | [         1]
+405: Register [ 7] written with value: [00000002] | [         2]
+415: Register [ 8] written with value: [00000001] | [         1]
+455: Register [ 7] written with value: [00000002] | [         2]
+465: Register [ 8] written with value: [00000001] | [         1]
+505: Register [ 7] written with value: [00000002] | [         2]
+```
+
+## BLTU (taken)
 - [bltutaken.mif](bltutaken.mif)
-- [bltutaken.txt](bltutaken.txt)
 
-## BGEU taken
-- [bgeutaken.mif](bgeutaken.mif)
-- [bgeutaken.txt](bgeutaken.txt)
+### Instructions Tested
+
+```assembly
+addi x7, x0, 1
+addi x2, x0, 4
+jal x10, 8
+or x4, x2, x0
+add x6, x4, x0
+sub x7, x0, x2
+addi x8, x0, 1
+bltu x8, x7, -8
+or x4, x2, x0
+```
+
+### Registers after each instruction
+
+```shell
+45: Register [ 7] written with value: [00000001] | [         1]
+55: Register [ 2] written with value: [00000004] | [         4]
+65: Register [10] written with value: [0000000c] | [        12]
+95: Register [ 6] written with value: [00000004] | [         4] 
+105: Register [ 7] written with value: [fffffffc] | [4294967292]
+115: Register [ 8] written with value: [00000001] | [         1]
+155: Register [ 7] written with value: [fffffffc] | [4294967292]
+165: Register [ 8] written with value: [00000001] | [         1]
+205: Register [ 7] written with value: [fffffffc] | [4294967292]
+215: Register [ 8] written with value: [00000001] | [         1]
+255: Register [ 7] written with value: [fffffffc] | [4294967292]
+265: Register [ 8] written with value: [00000001] | [         1]
+305: Register [ 7] written with value: [fffffffc] | [4294967292]
+315: Register [ 8] written with value: [00000001] | [         1]
+355: Register [ 7] written with value: [fffffffc] | [4294967292]
+365: Register [ 8] written with value: [00000001] | [         1]
+405: Register [ 7] written with value: [fffffffc] | [4294967292]
+415: Register [ 8] written with value: [00000001] | [         1]
+455: Register [ 7] written with value: [fffffffc] | [4294967292]
+465: Register [ 8] written with value: [00000001] | [         1]
+505: Register [ 7] written with value: [fffffffc] | [4294967292]
+```
+
+## BGEU (not taken)
+- [bgeuntaken.mif](bgeuntaken.mif)
+
+### Instructions Tested
+
+```assembly
+addi x7, x0, 1
+addi x2, x0, 4
+jal x10, 8
+or x4, x2, x0
+add x6, x4, x0
+sub x7, x0, x2
+addi x8, x0, 7
+bgeu x8, x7, -8
+or x4, x2, x0
+```
+
+### Registers after each instruction
+
+```shell
+45: Register [ 7] written with value: [00000001] | [         1]
+55: Register [ 2] written with value: [00000004] | [         4]
+65: Register [10] written with value: [0000000c] | [        12]
+95: Register [ 6] written with value: [00000004] | [         4]
+105: Register [ 7] written with value: [fffffffc] | [4294967292]
+115: Register [ 8] written with value: [00000007] | [         7]
+135: Register [ 4] written with value: [00000004] | [         4]
+```
 
 ## JALR
 - [jalr.mif](jalr.mif)
-- [jalr.txt](jalr.txt)
+
+### Instructions Tested
+
+```assembly
+addi x7, x0, -1
+sw x7, 0(x0)
+lw x9, 0(x0)
+or x4, x2, x0
+add x6, x4, x0
+jalr x12, x0, 12
+```
+
+### Registers/Memory State after each instruction
+
+The following information is extracted from the simulation log and can be interpreted as demonstrated in the example below:
+
+```shell
+tt: Register [x] written with value: [hhhhhhhh] | [dddddddd]
+tt: Memory [x] read with value: [hhhhhhhh] | [dddddddd]
+tt: Memory [x] written with value: [hhhhhhhh] | [dddddddd]
+```
+
+In the above example, `tt` represents the simulation time, `x` represents the register/memory address number, `hhhhhhhh` represents the hexadecimal value stored in the register/memory slot, and `dddddddd` represents the same value in decimal.
+
+---
+
+```shell
+45: Memory [  0] written with value: [ffffffff] | [4294967295]
+45: Register [ 7] written with value: [ffffffff] | [4294967295]
+55: Memory [  0] read with value: [xxxxxxxx] | [         x]
+55: Memory [  0] read with value: [00000000] | [         0]
+60: Memory [  0] read with value: [ffffffff] | [4294967295]
+65: Register [ 9] written with value: [ffffffff] | [4294967295]
+75: Register [ 4] written with value: [00000000] | [         0]
+85: Register [ 6] written with value: [00000000] | [         0]
+95: Register [12] written with value: [00000018] | [        24]
+125: Register [ 4] written with value: [00000000] | [         0]
+135: Register [ 6] written with value: [00000000] | [         0]
+145: Register [12] written with value: [00000018] | [        24]
+175: Register [ 4] written with value: [00000000] | [         0]
+185: Register [ 6] written with value: [00000000] | [         0]
+195: Register [12] written with value: [00000018] | [        24]
+225: Register [ 4] written with value: [00000000] | [         0]
+235: Register [ 6] written with value: [00000000] | [         0]
+245: Register [12] written with value: [00000018] | [        24]
+275: Register [ 4] written with value: [00000000] | [         0]
+285: Register [ 6] written with value: [00000000] | [         0]
+295: Register [12] written with value: [00000018] | [        24]
+325: Register [ 4] written with value: [00000000] | [         0]
+335: Register [ 6] written with value: [00000000] | [         0]
+345: Register [12] written with value: [00000018] | [        24]
+375: Register [ 4] written with value: [00000000] | [         0]
+385: Register [ 6] written with value: [00000000] | [         0]
+395: Register [12] written with value: [00000018] | [        24]
+425: Register [ 4] written with value: [00000000] | [         0]
+435: Register [ 6] written with value: [00000000] | [         0]
+445: Register [12] written with value: [00000018] | [        24]
+475: Register [ 4] written with value: [00000000] | [         0]
+485: Register [ 6] written with value: [00000000] | [         0]
+495: Register [12] written with value: [00000018] | [        24]
+```
