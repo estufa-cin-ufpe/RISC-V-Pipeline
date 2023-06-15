@@ -1,6 +1,6 @@
-# RISC-V-Pipeline
+# Pipelined RISC-V Processor
 
-This repository hosts an implementation of a RISC-V processor project in SystemVerilog. The primary goal of the project is to offer a dependable and high-performance solution for executing RISC-V instructions.
+This repository contains a SystemVerilog implementation of a RISC-V processor project. The main objective of this project is to provide a reliable and high-performance solution for executing RISC-V instructions.
 
 ## Repository Structure
 The repository is structured as follows:
@@ -63,3 +63,11 @@ The following table lists the implemented instructions and their status. The ins
 | 39| `ECALL`     |     ❌     |   ❌   |   ❌   | 
 | 40| `EBREAK`    |     ❌     |   ❌   |   ❌   | 
 
+## [Contributors](https://github.com/estufa-cin-ufpe/RISC-V-Pipeline/graphs/contributors)
+
+- [joaopmarinho](https://github.com/joaopmarinho)
+- [nathaliafab](https://github.com/nathaliafab)
+
+## Acknowledgements
+
+We extend our appreciation to [Yifan Xu](https://github.com/yifax/RISC-V-PipeLine) for their project, which provided the groundwork for this repository.
