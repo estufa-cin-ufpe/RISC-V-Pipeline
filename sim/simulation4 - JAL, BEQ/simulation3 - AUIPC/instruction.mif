@@ -1,0 +1,28 @@
+DEPTH = 65536;                   -- The size of memory in words
+WIDTH = 8;                    -- The size of data in bits
+ADDRESS_RADIX = DEC;          -- The radix for address values
+DATA_RADIX = BIN;             -- The radix for data values
+CONTENT                       -- start of (address : data pairs)
+BEGIN
+
+000: 10010011;  --addi x1, x0, 8 		#r1 =r0+8	(r1=8)
+001: 00000000;
+002: 10000000;
+003: 00000000;
+
+004: 00110011;  --sub x6, x6, x1		#r6 = fffffff8
+005: 00000011;
+006: 00010011;
+007: 01000000;
+
+008: 10110011;  --and x7, x6, x1		#r7 = 8
+009: 01110011;
+010: 00010011;
+011: 00000000;
+
+012: 00010111;  --auipc x6, 3			#r6 = 0000300c
+013: 00110011;
+014: 00000000;
+015: 00000000;
+
+END;
