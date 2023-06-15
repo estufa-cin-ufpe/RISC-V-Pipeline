@@ -7,8 +7,7 @@ The repository is structured as follows:
 - [`design`](/design): Contains the source code of the RISC-V processor project.
 - [`doc`](/doc): Contains the report.
 - [`sim`](/sim): Contains the simulation files and its results.
-- [`syn`](/syn): Contains the synthesis files and its results.
-- [`verif`](/test): Contains the testbench files.
+- [`verif`](/verif): Contains the testbench files.
 
 ## Resources
 - For additional information on the implementation, please refer to the [report.pdf](doc/report.pdf).
