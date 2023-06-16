@@ -1,46 +1,46 @@
-DEPTH = 65536;                   -- The size of memory in words
-WIDTH = 8;                    -- The size of data in bits
-ADDRESS_RADIX = DEC;          -- The radix for address values
-DATA_RADIX = BIN;             -- The radix for data values
-CONTENT                       -- start of (address : data pairs)
+DEPTH = 65536;
+WIDTH = 8;
+ADDRESS_RADIX = DEC;
+DATA_RADIX = BIN;
+CONTENT
 BEGIN
 
-000: 10010011; -- addi x7, x0, 1
+000: 10010011;		-- addi x7,x0,1
 001: 00000011;
 002: 00010000;
 003: 00000000;
 
-004: 00010011;  --addi x2, x0, 4 			#r2 =r0+4	(r2=4)
+004: 00010011;		-- addi x2,x0,4
 005: 00000001;
 006: 01000000;
 007: 00000000;
 
-008: 00110011;  --or x4, x2, x0			#r4 =r2|r0	(r4=4)
+008: 00110011;		-- or x4,x2,x0
 009: 01100010;
 010: 00000001;
 011: 00000000;
 
-012: 00000011; -- lb x6, 0(x7) ->lê o valor que está no endereço 001 e guarda em x6
+012: 00000011;		-- lb x6,0(x7)
 013: 10000011;
 014: 00000011;
 015: 00000000;
 
-016: 00110011;  --add x6, x4, x0			#r6 =r4+r2	(r6=8)
+016: 00110011;		-- add x6,x4,x0
 017: 00000011;
-018: 00100010;
+018: 00000010;
 019: 00000000;
 
-020: 10000011; -- lb x7, 0(x6) ->lê o valor que está no endereço 008 e guarda em x7
+020: 10000011;		-- lb x7,0(x6)
 021: 00000011;
 022: 00000011;
 023: 00000000;
 
-024: 00000011; -- lh x8, 0(x6) ->lê o valor que está no endereço 008 e 009 e guarda em x8
+024: 00000011;		-- lh x8,0(x6)
 025: 00010100;
 026: 00000011;
 027: 00000000;
 
-028: 10000011; -- lw x9, 0(x6) ->lê o valor que está no endereço 008, 009, 010 e 011 e guarda em x9
+028: 10000011;		-- lw x9,0(x6)
 029: 00100100;
 030: 00000011;
 031: 00000000;

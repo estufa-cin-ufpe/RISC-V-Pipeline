@@ -79,7 +79,7 @@ lhu x8,0(x6)
 65: Memory [  1] read with value: [ffffffff] | [4294967295]
 70: Memory [  1] read with value: [ffffff8f] | [4294967183]
 75: Register [ 6] written with value: [ffffff8f] | [4294967183]
-85: Register [ 6] written with value: [00000008] | [         8]
+85: Register [ 6] written with value: [00000004] | [         4]
 85: Memory [  8] read with value: [ffffff8f] | [4294967183]
 85: Memory [  8] read with value: [000000fb] | [       251]
 95: Register [ 7] written with value: [000000fb] | [       251]

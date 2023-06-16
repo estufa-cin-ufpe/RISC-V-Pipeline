@@ -13,9 +13,9 @@ The obtained result matches the expected outcome, which can be verified below.
 The simulation included testing the following instructions:
 
 ```assembly
-addi x7, x0, -1
-sw x7, 0(x0)
-lw x9, 0(x0)
+addi x7,x0,-1
+sw x7,0(x0)
+lw x9,0(x0)
 ```
 
 ### Registers/Memory State after each instruction
@@ -48,11 +48,11 @@ In the above example, `tt` represents the simulation time, `x` represents the re
 ### Instructions Tested
 
 ```assembly
-addi x7, x0, 0
-sb x7, 2(x0)
-lw x9, 0(x0)
-sh x7, 2(x0)
-lw x8, 0(x0)
+addi x7,x0,0
+sb x7,2(x0)
+lw x9,0(x0)
+sh x7,2(x0)
+lw x8,0(x0)
 ```
 
 ### Registers/Memory State after each instruction

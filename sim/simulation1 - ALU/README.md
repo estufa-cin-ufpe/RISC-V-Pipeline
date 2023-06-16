@@ -16,7 +16,7 @@ addi x1,x0,8
 addi x2,x0,4
 or x3,x1,x2
 or x4,x2,x0
-add x6,x4,x0
+add x6,x4,x2
 addi x4,x0,2
 addi x5,x0,-2
 sll x18,x1,x4

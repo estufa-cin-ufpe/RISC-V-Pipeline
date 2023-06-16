@@ -11,15 +11,15 @@ The obtained result matches the expected outcome, which can be verified below.
 The simulation included testing the following instructions:
 
 ```assembly
-addi x7, x0, 1
-addi x2, x0, 4
-jal x10, 8
-or x4, x2, x0
-add x6, x4, x0
-addi x7, x0, 1
-addi x8, x0, 2
-beq x7, x7, -8
-or x4, x2, x0
+addi x7,x0,1
+addi x2,x0,4
+jal x10,8
+or x4,x2,x0
+add x6,x4,x2
+addi x7,x0,1
+addi x8,x0,2
+beq x7,x7,-8
+or x4,x2,x0
 ```
 
 ### Registers after each instruction
@@ -65,15 +65,15 @@ In the above example, `tt` represents the simulation time, `x` represents the re
 ### Instructions Tested
 
 ```assembly
-addi x7, x0, 1
-addi x2, x0, 4
-jal x10, 8
-or x4, x2, x0
-add x6, x4, x0
-addi x7, x0, 1
-addi x8, x0, 2
-beq x8, x7, -8
-or x4, x2, x0
+addi x7,x0,1
+addi x2,x0,4
+jal x10,8
+or x4,x2,x0
+add x6,x4,x2
+addi x7,x0,1
+addi x8,x0,2
+beq x8,x7,-8
+or x4,x2,x0
 ```
 
 ### Registers after each instruction
@@ -94,15 +94,15 @@ or x4, x2, x0
 ### Instructions Tested
 
 ```assembly
-addi x7, x0, 1
-addi x2, x0, 4
-jal x10, 8
-or x4, x2, x0
-add x6, x4, x0
-addi x7, x0, 1
-addi x8, x0, 2
-bne x8, x7, -8
-or x4, x2, x0
+addi x7,x0,1
+addi x2,x0,4
+jal x10,8
+or x4,x2,x0
+add x6,x4,x2
+addi x7,x0,1
+addi x8,x0,2
+bne x8,x7,-8
+or x4,x2,x0
 ```
 
 ### Registers after each instruction
@@ -137,15 +137,15 @@ or x4, x2, x0
 ### Instructions Tested
 
 ```assembly
-addi x7, x0, 1
-addi x2, x0, 4
-jal x10, 8
-or x4, x2, x0
-add x6, x4, x0
-addi x7, x0, 2
-addi x8, x0, 1
-blt x7, x8, -8
-or x4, x2, x0
+addi x7,x0,1
+addi x2,x0,4
+jal x10,8
+or x4,x2,x0
+add x6,x4,x2
+addi x7,x0,2
+addi x8,x0,1
+blt x8,x7,-8
+or x4,x2,x0
 ```
 
 ### Registers after each instruction
@@ -180,15 +180,15 @@ or x4, x2, x0
 ### Instructions Tested
 
 ```assembly
-addi x7, x0, 1
-addi x2, x0, 4
-jal x10, 8
-or x4, x2, x0
-add x6, x4, x0
-addi x7, x0, 2
-addi x8, x0, 1
-bge x8, x7, -8
-or x4, x2, x0
+addi x7,x0,1
+addi x2,x0,4
+jal x10,8
+or x4,x2,x0
+add x6,x4,x2
+addi x7,x0,2
+addi x8,x0,1
+bge x7,x8,-8
+or x4,x2,x0
 ```
 
 ### Registers after each instruction
@@ -223,15 +223,15 @@ or x4, x2, x0
 ### Instructions Tested
 
 ```assembly
-addi x7, x0, 1
-addi x2, x0, 4
-jal x10, 8
-or x4, x2, x0
-add x6, x4, x0
-sub x7, x0, x2
-addi x8, x0, 1
-bltu x8, x7, -8
-or x4, x2, x0
+addi x7,x0,1
+addi x2,x0,4
+jal x10,8
+or x4,x2,x0
+add x6,x4,x2
+sub x7,x0,x2
+addi x8,x0,1
+bltu x8,x7,-8
+or x4,x2,x0
 ```
 
 ### Registers after each instruction
@@ -295,12 +295,12 @@ or x4, x2, x0
 ### Instructions Tested
 
 ```assembly
-addi x7, x0, -1
-sw x7, 0(x0)
-lw x9, 0(x0)
-or x4, x2, x0
-add x6, x4, x0
-jalr x12, x0, 12
+addi x7,x0,-1
+sw x7,0(x0)
+lw x9,0(x0)
+or x4,x2,x0
+add x6,x4,x2
+jalr x12,x0,12
 ```
 
 ### Registers/Memory State after each instruction
