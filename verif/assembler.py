@@ -146,7 +146,9 @@ def read_file(file_name):
 		if not instructions:
 			raise Exception
 	except Exception:
-		print(f"The file '{file_name}' could not be read. Make sure it exists and is not empty.\n")
+		print(
+		 f"The file '{file_name}' could not be read. Make sure it exists and is not empty.\n"
+		)
 		exit(1)
 
 	return instructions
@@ -303,10 +305,18 @@ def translate_instruction(instruction):
 
 		binary = imm + rs1 + funct3[instr] + rd + opcode[instr]
 
-	elif (instr == "slli" or instr == "srli" or instr == "srai" or instr == "add"
-	      or instr == "sub" or instr == "sll" or instr == "slt" or instr == "sltu"
-	      or instr == "xor" or instr == "srl" or instr == "sra" or instr == "or"
-	      or instr == "and"):
+	elif (instr == "slli" or instr == "srli" or instr == "srai"):
+		rs1 = instruction.split(" ")[1].split(",")[1]
+		rs1 = bin(int(rs1[1:]))[2:].zfill(5)
+
+		shamt = instruction.split(" ")[1].split(",")[2]
+		shamt = sfill(sbin(shamt)[0:5], 5)
+
+		binary = funct7[instr] + shamt + rs1 + funct3[instr] + rd + opcode[instr]
+
+	elif (instr == "add" or instr == "sub" or instr == "sll" or instr == "slt"
+	      or instr == "sltu" or instr == "xor" or instr == "srl" or instr == "sra"
+	      or instr == "or" or instr == "and"):
 		rs1 = instruction.split(" ")[1].split(",")[1]
 		rs1 = bin(int(rs1[1:]))[2:].zfill(5)
 
