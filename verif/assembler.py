@@ -128,11 +128,11 @@ funct7 = {
 # creates the file and writes the header
 def create_file(file_name):
 	with open(file_name, "w") as file:
-		file.write("DEPTH = 65536;\n")  # The size of memory in words
-		file.write("WIDTH = 8;\n")  # The size of data in bits
-		file.write("ADDRESS_RADIX = DEC;\n")  # The radix for address values
-		file.write("DATA_RADIX = BIN;\n")  # The radix for data values
-		file.write("CONTENT\n")  # start of (address : data pairs)
+		file.write("DEPTH = 65536;			-- The size of memory in words\n")
+		file.write("WIDTH = 8;				-- The size of data in bits\n")
+		file.write("ADDRESS_RADIX = DEC;	-- The radix for address values\n")
+		file.write("DATA_RADIX = BIN;		-- The radix for data values\n")
+		file.write("CONTENT					-- Start of (address: data pairs)\n")
 		file.write("BEGIN\n\n")
 	file.close()
 
@@ -223,13 +223,13 @@ def translate_instruction(instruction):
 
 	elif (instr == "jal"):
 		imm = instruction.split(" ")[1].split(",")[1]
-		imm = sfill(sbin(imm)[0:20], 21)
+		imm = sfill(sbin(imm)[0:20], 20)
 		imm = imm[::-1]
 
-		bit20 = imm[20]
-		bit10to1 = (imm[1:10])[::-1]
-		bit11 = imm[11]
-		bit19to12 = (imm[12:19])[::-1]
+		bit20 = imm[19]
+		bit10to1 = (imm[0:9])[::-1]
+		bit11 = imm[10]
+		bit19to12 = (imm[11:18])[::-1]
 
 		imm = sfill((bit20 + bit10to1 + bit11 + bit19to12), 20)
 
