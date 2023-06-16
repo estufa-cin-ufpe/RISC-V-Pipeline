@@ -1,0 +1,4 @@
+sub x6,x6,x1
+addi x1,x0,8
+lw x9,0(x0)
+auipc x6,3
