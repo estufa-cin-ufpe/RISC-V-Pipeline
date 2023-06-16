@@ -139,9 +139,16 @@ def create_file(file_name):
 
 # reads the instruction file and returns a list containing the instructions (its lines)
 def read_file(file_name):
-	with open(file_name, "r") as file:
-		instructions = file.readlines()
-	file.close()
+	try:
+		with open(file_name, "r") as file:
+			instructions = file.readlines()
+		file.close()
+		if not instructions:
+			raise Exception
+	except Exception:
+		print(f"The file '{file_name}' could not be read. Make sure it exists and is not empty.\n")
+		exit(1)
+
 	return instructions
 
 
@@ -312,8 +319,8 @@ def translate_instruction(instruction):
 
 
 def main():
-	create_file("instruction.mif")
 	instructions = read_file("instructions.txt")
+	create_file("instruction.mif")
 
 	for i in range(len(instructions)):
 		binary, success = translate(instructions[i])
@@ -328,7 +335,7 @@ def main():
 			line = i + 1
 			print(f"Translation failed for instruction: \"{instr}\" on line {line}.\n")
 			os.remove("instruction.mif")
-			exit(1)
+			exit(2)
 
 	end_file("instruction.mif")
 
