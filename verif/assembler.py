@@ -242,7 +242,7 @@ def translate_instruction(instruction):
 		imm = instruction.split(" ")[1].split(",")[2]
 		imm = sfill(sbin(imm)[0:12], 12)
 
-		binary = imm + rs1 + "000" + rd + opcode[instr]
+		binary = imm + rs1 + funct3[instr] + rd + opcode[instr]
 
 	elif (instr == "beq" or instr == "bne" or instr == "blt" or instr == "bge"
 	      or instr == "bltu" or instr == "bgeu"):
