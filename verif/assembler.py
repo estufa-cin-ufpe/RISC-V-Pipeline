@@ -6,7 +6,7 @@ This script translates instructions from a given file into a format readable by 
 (It basically functions as an assembler.)
 
 > The instructions to be translated are stored in a file named "instructions.txt"
-> The translated instructions will be written to a file called "instruction.mif"
+> The translated instructions will be written to a file named "instruction.mif"
 
 The instructions MUST follow the following formats, with one instruction per line:
 
