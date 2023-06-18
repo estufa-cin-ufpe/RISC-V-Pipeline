@@ -266,15 +266,15 @@ or x4,x2,x0
 ### Instructions Tested
 
 ```assembly
-addi x7, x0, 1
-addi x2, x0, 4
-jal x10, 8
-or x4, x2, x0
-add x6, x4, x0
-sub x7, x0, x2
-addi x8, x0, 7
-bgeu x8, x7, -8
-or x4, x2, x0
+addi x7,x0,1
+addi x2,x0,4
+jal x10,8
+or x4,x2,x0
+add x6,x4,x2
+sub x7,x0,x2
+addi x8,x0,7
+bgeu x8,x7,-8
+or x4,x2,x0
 ```
 
 ### Registers after each instruction
