@@ -154,6 +154,7 @@ def read_file(file_name):
 	return instructions
 
 
+# writes 8-bit chunks of the instructions to the file ({index}: {chunk}		-- {instruction})
 def write_instruction(file_name, index, chunk, instr):
 	if (int(index) % 4 != 0):
 		instr = ""
@@ -348,7 +349,7 @@ def main():
 			exit(2)
 
 	end_file("instruction.mif")
+	print("Assembly to machine code translation complete.\n")
 
 
 main()
-print("Assembly to machine code translation complete.\n")
