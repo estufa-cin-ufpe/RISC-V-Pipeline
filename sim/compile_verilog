@@ -1,5 +1,4 @@
     /design/RegPack.sv
-    /design/Datapath.sv
     /design/alu.sv
     /design/ALUController.sv
     /design/BranchUnit.sv
