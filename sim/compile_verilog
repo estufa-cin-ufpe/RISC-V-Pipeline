@@ -1,22 +1,22 @@
+    /design/adder.sv
+    /design/ramOnChip32.v
+    /design/ramOnChipData.v
+    /design/Memoria32.sv
+    /design/Memoria32Data.sv
     /design/RegPack.sv
+    /design/RegFile.sv
     /design/alu.sv
     /design/ALUController.sv
     /design/BranchUnit.sv
     /design/Controller.sv
-    /design/datamemory.sv
     /design/flopr.sv
     /design/ForwardingUnit.sv
-    /design/adder.sv
     /design/HazardDetection.sv
     /design/imm_Gen.sv
-    /design/instructionmemory.sv
     /design/mux2.sv
     /design/mux4.sv
-    /design/RegFile.sv
-    /design/RISC_V.sv
-    /design/Memoria32.sv
-    /design/ramOnChip32.v
-    /design/Memoria32Data.sv
-    /design/ramOnChipData.v
-    /verif/tb_top.sv
+    /design/datamemory.sv
+    /design/instructionmemory.sv
     /design/Datapath.sv
+    /design/RISC_V.sv
+    /verif/tb_top.sv
