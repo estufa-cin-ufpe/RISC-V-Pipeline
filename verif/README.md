@@ -21,8 +21,8 @@
 3. Include the testbench file [`tb_top.sv`](tb_top.sv) in the project.
 
 4. In the project directory, ensure that you have the following files:
-    - [compile_verilog](/sim/compile_verilog)
-    - [runtb_top](/sim/runtb_top)
+    - [compile_verilog](compile_verilog)
+    - [runtb_top](runtb_top)
     - instruction.mif
     - data.mif
 
