@@ -28,113 +28,245 @@ auipc x6,3
 
 import os
 
-# bits 0-6
-opcode = {
- "lui": "0110111",
- "auipc": "0010111",
- "jal": "1101111",
- "jalr": "1100111",
- "beq": "1100011",
- "bne": "1100011",
- "blt": "1100011",
- "bge": "1100011",
- "bltu": "1100011",
- "bgeu": "1100011",
- "lb": "0000011",
- "lh": "0000011",
- "lw": "0000011",
- "lbu": "0000011",
- "lhu": "0000011",
- "sb": "0100011",
- "sh": "0100011",
- "sw": "0100011",
- "addi": "0010011",
- "slti": "0010011",
- "sltiu": "0010011",
- "xori": "0010011",
- "ori": "0010011",
- "andi": "0010011",
- "slli": "0010011",
- "srli": "0010011",
- "srai": "0010011",
- "add": "0110011",
- "sub": "0110011",
- "sll": "0110011",
- "slt": "0110011",
- "sltu": "0110011",
- "xor": "0110011",
- "srl": "0110011",
- "sra": "0110011",
- "or": "0110011",
- "and": "0110011",
-}
+BITS_IN_CHUNK = 8
 
-# bits 12-14
-funct3 = {
- "jalr": "000",
- "beq": "000",
- "bne": "001",
- "blt": "100",
- "bge": "101",
- "bltu": "110",
- "bgeu": "111",
- "lb": "000",
- "lh": "001",
- "lw": "010",
- "lbu": "100",
- "lhu": "101",
- "sb": "000",
- "sh": "001",
- "sw": "010",
- "addi": "000",
- "slti": "010",
- "sltiu": "011",
- "xori": "100",
- "ori": "110",
- "andi": "111",
- "slli": "001",
- "srli": "101",
- "srai": "101",
- "add": "000",
- "sub": "000",
- "sll": "001",
- "slt": "010",
- "sltu": "011",
- "xor": "100",
- "srl": "101",
- "sra": "101",
- "or": "110",
- "and": "111",
-}
-
-# bits 25-31
-funct7 = {
- "slli": "0000000",
- "srli": "0000000",
- "srai": "0100000",
- "add": "0000000",
- "sub": "0100000",
- "sll": "0000000",
- "slt": "0000000",
- "sltu": "0000000",
- "xor": "0000000",
- "srl": "0000000",
- "sra": "0100000",
- "or": "0000000",
- "and": "0000000",
+INSTRUCTION = {
+ "lui": {
+  "format": "U",
+  "opcode": "0110111",
+  "funct3": "",
+  "funct7": ""
+ },
+ "auipc": {
+  "format": "U",
+  "opcode": "0010111",
+  "funct3": "",
+  "funct7": ""
+ },
+ "jal": {
+  "format": "J",
+  "opcode": "1101111",
+  "funct3": "",
+  "funct7": ""
+ },
+ "jalr": {
+  "format": "I",
+  "opcode": "1100111",
+  "funct3": "000",
+  "funct7": ""
+ },
+ "beq": {
+  "format": "B",
+  "opcode": "1100011",
+  "funct3": "000",
+  "funct7": ""
+ },
+ "bne": {
+  "format": "B",
+  "opcode": "1100011",
+  "funct3": "001",
+  "funct7": ""
+ },
+ "blt": {
+  "format": "B",
+  "opcode": "1100011",
+  "funct3": "100",
+  "funct7": ""
+ },
+ "bge": {
+  "format": "B",
+  "opcode": "1100011",
+  "funct3": "101",
+  "funct7": ""
+ },
+ "bltu": {
+  "format": "B",
+  "opcode": "1100011",
+  "funct3": "110",
+  "funct7": ""
+ },
+ "bgeu": {
+  "format": "B",
+  "opcode": "1100011",
+  "funct3": "111",
+  "funct7": ""
+ },
+ "lb": {
+  "format": "I",
+  "opcode": "0000011",
+  "funct3": "000",
+  "funct7": ""
+ },
+ "lh": {
+  "format": "I",
+  "opcode": "0000011",
+  "funct3": "001",
+  "funct7": ""
+ },
+ "lw": {
+  "format": "I",
+  "opcode": "0000011",
+  "funct3": "010",
+  "funct7": ""
+ },
+ "lbu": {
+  "format": "I",
+  "opcode": "0000011",
+  "funct3": "100",
+  "funct7": ""
+ },
+ "lhu": {
+  "format": "I",
+  "opcode": "0000011",
+  "funct3": "101",
+  "funct7": ""
+ },
+ "sb": {
+  "format": "S",
+  "opcode": "0100011",
+  "funct3": "000",
+  "funct7": ""
+ },
+ "sh": {
+  "format": "S",
+  "opcode": "0100011",
+  "funct3": "001",
+  "funct7": ""
+ },
+ "sw": {
+  "format": "S",
+  "opcode": "0100011",
+  "funct3": "010",
+  "funct7": ""
+ },
+ "addi": {
+  "format": "I",
+  "opcode": "0010011",
+  "funct3": "000",
+  "funct7": ""
+ },
+ "slti": {
+  "format": "I",
+  "opcode": "0010011",
+  "funct3": "010",
+  "funct7": ""
+ },
+ "sltiu": {
+  "format": "I",
+  "opcode": "0010011",
+  "funct3": "011",
+  "funct7": ""
+ },
+ "xori": {
+  "format": "I",
+  "opcode": "0010011",
+  "funct3": "100",
+  "funct7": ""
+ },
+ "ori": {
+  "format": "I",
+  "opcode": "0010011",
+  "funct3": "110",
+  "funct7": ""
+ },
+ "andi": {
+  "format": "I",
+  "opcode": "0010011",
+  "funct3": "111",
+  "funct7": ""
+ },
+ "slli": {
+  "format": "I",
+  "opcode": "0010011",
+  "funct3": "001",
+  "funct7": "0000000"
+ },
+ "srli": {
+  "format": "I",
+  "opcode": "0010011",
+  "funct3": "101",
+  "funct7": "0000000"
+ },
+ "srai": {
+  "format": "I",
+  "opcode": "0010011",
+  "funct3": "101",
+  "funct7": "0100000"
+ },
+ "add": {
+  "format": "R",
+  "opcode": "0110011",
+  "funct3": "000",
+  "funct7": "0000000"
+ },
+ "sub": {
+  "format": "R",
+  "opcode": "0110011",
+  "funct3": "000",
+  "funct7": "0100000"
+ },
+ "sll": {
+  "format": "R",
+  "opcode": "0110011",
+  "funct3": "001",
+  "funct7": "0000000"
+ },
+ "slt": {
+  "format": "R",
+  "opcode": "0110011",
+  "funct3": "010",
+  "funct7": "0000000"
+ },
+ "sltu": {
+  "format": "R",
+  "opcode": "0110011",
+  "funct3": "011",
+  "funct7": "0000000"
+ },
+ "xor": {
+  "format": "R",
+  "opcode": "0110011",
+  "funct3": "100",
+  "funct7": "0000000"
+ },
+ "srl": {
+  "format": "R",
+  "opcode": "0110011",
+  "funct3": "101",
+  "funct7": "0000000"
+ },
+ "sra": {
+  "format": "R",
+  "opcode": "0110011",
+  "funct3": "101",
+  "funct7": "0100000"
+ },
+ "or": {
+  "format": "R",
+  "opcode": "0110011",
+  "funct3": "110",
+  "funct7": "0000000"
+ },
+ "and": {
+  "format": "R",
+  "opcode": "0110011",
+  "funct3": "111",
+  "funct7": "0000000"
+ },
 }
 
 
 # creates the file and writes the header
 def create_file(file_name):
+	header = ("DEPTH = 65536;          -- The size of memory in words\n"
+	          "WIDTH = 8;              -- The size of data in bits\n"
+	          "ADDRESS_RADIX = DEC;    -- The radix for address values\n"
+	          "DATA_RADIX = BIN;       -- The radix for data values\n"
+	          "CONTENT                 -- Start of (address: data pairs)\n"
+	          "BEGIN\n\n")
+
 	with open(file_name, "w") as file:
-		file.write("DEPTH = 65536;			-- The size of memory in words\n")
-		file.write("WIDTH = 8;				-- The size of data in bits\n")
-		file.write("ADDRESS_RADIX = DEC;	-- The radix for address values\n")
-		file.write("DATA_RADIX = BIN;		-- The radix for data values\n")
-		file.write("CONTENT					-- Start of (address: data pairs)\n")
-		file.write("BEGIN\n\n")
-	file.close()
+		file.write(header)
 
 
 # reads the instruction file and returns a list containing the instructions (its lines)
@@ -142,13 +274,10 @@ def read_file(file_name):
 	try:
 		with open(file_name, "r") as file:
 			instructions = file.readlines()
-		file.close()
 		if not instructions:
-			raise Exception
-	except Exception:
-		print(
-		 f"The file '{file_name}' could not be read. Make sure it exists and is not empty.\n"
-		)
+			raise Exception("Empty file or no instructions found.")
+	except Exception as e:
+		print(f"Error reading instructions from '{file_name}': {e}")
 		exit(1)
 
 	return instructions
@@ -159,20 +288,18 @@ def write_instruction(file_name, index, chunk, instr):
 	if (int(index) % 4 != 0):
 		instr = ""
 	else:
-		instr = "		-- " + instr.rstrip("\n")
+		instr = f"\t-- {instr.rstrip()}"
 
 	with open(file_name, "a") as file:
-		file.write(str(index) + ": " + chunk + ";" + instr + "\n")
+		file.write(f"{index}: {chunk};{instr}\n")
 		if (int(index) % 4 == 3):
 			file.write("\n")
-	file.close()
 
 
 # appends a final "END;" string to the file
 def end_file(file_name):
 	with open(file_name, "a") as file:
 		file.write("END;")
-	file.close()
 
 
 # converts a decimal value to a signed binary value (sign bit is the first bit)
@@ -197,134 +324,175 @@ def sfill(value, length):
 		return value
 
 
-# tries to translate an instruction to binary (assembly to machine code)
-def translate(instruction):
-	try:
-		binary = translate_instruction(instruction)
-		success = True
-	except Exception:
-		binary = ""
-		success = False
+def check_register(register):
+	if (register[0] != "x" or int(register[1:]) < 0 or int(register[1:]) > 31):
+		raise Exception("Invalid register.")
 
-	return binary, success
+
+def check_instruction(instruction):
+	if (instruction not in INSTRUCTION):
+		raise Exception("Instruction not found.")
+
+
+def check_immediate(immediate, length):
+	if (int(immediate) > 2**(length - 1) - 1 or int(immediate) < -2**(length - 1) + 1):
+		raise Exception("Immediate value out of range.")
 
 
 # translates an instruction to binary (assembly to machine code)
 def translate_instruction(instruction):
-	instr = instruction.split(" ")[0]
+	try:
+		instr = instruction.split(" ")[0]
 
-	rd = instruction.split(" ")[1].split(",")[0]
-	rd = bin(int(rd[1:]))[2:].zfill(5)
+		check_instruction(instr)
 
-	if (instr == "lui" or instr == "auipc"):
-		imm = instruction.split(" ")[1].split(",")[1]
-		imm = sfill(sbin(imm)[0:20], 20)
+		opcode = INSTRUCTION[instr]["opcode"]
+		funct3 = INSTRUCTION[instr]["funct3"]
+		funct7 = INSTRUCTION[instr]["funct7"]
 
-		binary = imm + rd + opcode[instr]
+		if (INSTRUCTION[instr]["format"] not in ["S", "B"]):
+			rd = instruction.split(" ")[1].split(",")[0]
 
-	elif (instr == "jal"):
-		imm = instruction.split(" ")[1].split(",")[1]
-		imm = sfill(sbin(imm)[0:20], 20)
-		imm = imm[::-1]
+			check_register(rd)
 
-		bit20 = imm[19]
-		bit10to1 = (imm[0:9])[::-1]
-		bit11 = imm[10]
-		bit19to12 = (imm[11:18])[::-1]
+			rd = bin(int(rd[1:]))[2:].zfill(5)
 
-		imm = sfill((bit20 + bit10to1 + bit11 + bit19to12), 20)
+		if (INSTRUCTION[instr]["format"] == "U"):
+			imm = instruction.split(" ")[1].split(",")[1]
 
-		binary = imm + rd + opcode[instr]
+			check_immediate(imm, 20)
 
-	elif (instr == "jalr"):
-		rs1 = instruction.split(" ")[1].split(",")[1]
-		rs1 = bin(int(rs1[1:]))[2:].zfill(5)
+			imm = sfill(sbin(imm)[0:20], 20)
 
-		imm = instruction.split(" ")[1].split(",")[2]
-		imm = sfill(sbin(imm)[0:12], 12)
+			binary = imm + rd + opcode
 
-		binary = imm + rs1 + funct3[instr] + rd + opcode[instr]
+		elif (INSTRUCTION[instr]["format"] == "J"):
+			imm = instruction.split(" ")[1].split(",")[1]
 
-	elif (instr == "beq" or instr == "bne" or instr == "blt" or instr == "bge"
-	      or instr == "bltu" or instr == "bgeu"):
-		rs1 = instruction.split(" ")[1].split(",")[0]
-		rs1 = bin(int(rs1[1:]))[2:].zfill(5)
+			check_immediate(imm, 20)
 
-		rs2 = instruction.split(" ")[1].split(",")[1]
-		rs2 = bin(int(rs2[1:]))[2:].zfill(5)
+			imm = sfill(sbin(imm)[0:20], 21)
+			imm = imm[::-1]
 
-		imm = instruction.split(" ")[1].split(",")[2]
-		imm = sfill(sbin(imm)[0:12], 13)
-		imm = imm[::-1]
+			bit20 = imm[20]
+			bit10to1 = (imm[1:11])[::-1]
+			bit11 = imm[11]
+			bit19to12 = (imm[12:20])[::-1]
 
-		bit12 = imm[12]
-		bit10to5 = (imm[5:10])[::-1]
-		bit4to1 = (imm[1:4])[::-1]
-		bit11 = imm[11]
+			imm = sfill((bit20 + bit10to1 + bit11 + bit19to12), 20)
 
-		binary = sfill((bit12 + bit10to5), 7) + rs2 + rs1 + funct3[instr] + sfill(
-		 (bit4to1 + bit11), 5) + opcode[instr]
+			binary = imm + rd + opcode
 
-	elif (instr == "lb" or instr == "lh" or instr == "lw" or instr == "lbu"
-	      or instr == "lhu"):
-		rs1 = instruction.split(" ")[1].split(",")[1]
-		rs1 = rs1.split("(")[1].split(")")[0]
-		rs1 = bin(int(rs1[1:]))[2:].zfill(5)
+		elif (
+		  INSTRUCTION[instr]["format"] == "I"
+		  and instr not in ["lw", "lb", "lh", "lbu", "lhu", "slli", "srli", "srai"]):
+			rs1 = instruction.split(" ")[1].split(",")[1]
 
-		imm = instruction.split(" ")[1].split(",")[1]
-		imm = imm.split("(")[0]
-		imm = sfill(sbin(imm)[0:12], 12)
+			check_register(rs1)
 
-		binary = imm + rs1 + funct3[instr] + rd + opcode[instr]
+			rs1 = bin(int(rs1[1:]))[2:].zfill(5)
 
-	elif (instr == "sb" or instr == "sh" or instr == "sw"):
-		rs2 = instruction.split(" ")[1].split(",")[0]
-		rs2 = bin(int(rs2[1:]))[2:].zfill(5)
+			imm = instruction.split(" ")[1].split(",")[2]
 
-		rs1 = instruction.split(" ")[1].split(",")[1]
-		rs1 = rs1.split("(")[1].split(")")[0]
-		rs1 = bin(int(rs1[1:]))[2:].zfill(5)
+			check_immediate(imm, 12)
 
-		imm = instruction.split(" ")[1].split(",")[1]
-		imm = imm.split("(")[0]
-		imm = sfill(sbin(imm)[0:11], 12)
-		imm = imm[::-1]
+			imm = sfill(sbin(imm)[0:12], 12)
 
-		bit11to5 = (imm[5:11])[::-1]
-		bit4to0 = (imm[0:4])[::-1]
+			binary = imm + rs1 + funct3 + rd + opcode
 
-		binary = sfill(bit11to5, 7) + rs2 + rs1 + funct3[instr] + sfill(
-		 bit4to0, 5) + opcode[instr]
+		elif (INSTRUCTION[instr]["format"] == "B"):
+			rs1 = instruction.split(" ")[1].split(",")[0]
+			rs2 = instruction.split(" ")[1].split(",")[1]
 
-	elif (instr == "addi" or instr == "slti" or instr == "sltiu"
-	      or instr == "xori" or instr == "ori" or instr == "andi"):
-		rs1 = instruction.split(" ")[1].split(",")[1]
-		rs1 = bin(int(rs1[1:]))[2:].zfill(5)
+			check_register(rs1)
+			check_register(rs2)
 
-		imm = instruction.split(" ")[1].split(",")[2]
-		imm = sfill(sbin(imm)[0:12], 12)
+			rs1 = bin(int(rs1[1:]))[2:].zfill(5)
+			rs2 = bin(int(rs2[1:]))[2:].zfill(5)
 
-		binary = imm + rs1 + funct3[instr] + rd + opcode[instr]
+			imm = instruction.split(" ")[1].split(",")[2]
 
-	elif (instr == "slli" or instr == "srli" or instr == "srai"):
-		rs1 = instruction.split(" ")[1].split(",")[1]
-		rs1 = bin(int(rs1[1:]))[2:].zfill(5)
+			check_immediate(imm, 12)
 
-		shamt = instruction.split(" ")[1].split(",")[2]
-		shamt = sfill(sbin(shamt)[0:5], 5)
+			imm = sfill(sbin(imm)[0:12], 13)
+			imm = imm[::-1]
 
-		binary = funct7[instr] + shamt + rs1 + funct3[instr] + rd + opcode[instr]
+			bit12 = imm[12]
+			bit10to5 = (imm[5:11])[::-1]
+			bit4to1 = (imm[1:5])[::-1]
+			bit11 = imm[11]
 
-	elif (instr == "add" or instr == "sub" or instr == "sll" or instr == "slt"
-	      or instr == "sltu" or instr == "xor" or instr == "srl" or instr == "sra"
-	      or instr == "or" or instr == "and"):
-		rs1 = instruction.split(" ")[1].split(",")[1]
-		rs1 = bin(int(rs1[1:]))[2:].zfill(5)
+			binary = sfill((bit12 + bit10to5), 7) + rs2 + rs1 + funct3 + sfill(
+			 (bit4to1 + bit11), 5) + opcode
 
-		rs2 = instruction.split(" ")[1].split(",")[2]
-		rs2 = bin(int(rs2[1:]))[2:].zfill(5)
+		elif (instr in ["lb", "lh", "lw", "lbu", "lhu"]):
+			rs1 = instruction.split(" ")[1].split(",")[1]
+			rs1 = rs1.split("(")[1].split(")")[0]
 
-		binary = funct7[instr] + rs2 + rs1 + funct3[instr] + rd + opcode[instr]
+			check_register(rs1)
+
+			rs1 = bin(int(rs1[1:]))[2:].zfill(5)
+
+			imm = instruction.split(" ")[1].split(",")[1]
+			imm = imm.split("(")[0]
+
+			check_immediate(imm, 12)
+
+			imm = sfill(sbin(imm)[0:12], 12)
+
+			binary = imm + rs1 + funct3 + rd + opcode
+
+		elif (INSTRUCTION[instr]["format"] == "S"):
+			rs2 = instruction.split(" ")[1].split(",")[0]
+			rs1 = instruction.split(" ")[1].split(",")[1]
+			rs1 = rs1.split("(")[1].split(")")[0]
+
+			check_register(rs1)
+			check_register(rs2)
+
+			rs2 = bin(int(rs2[1:]))[2:].zfill(5)
+			rs1 = bin(int(rs1[1:]))[2:].zfill(5)
+
+			imm = instruction.split(" ")[1].split(",")[1]
+			imm = imm.split("(")[0]
+
+			check_immediate(imm, 12)
+
+			imm = sfill(sbin(imm)[0:12], 12)
+			imm = imm[::-1]
+
+			bit11to5 = (imm[5:12])[::-1]
+			bit4to0 = (imm[0:5])[::-1]
+
+			binary = sfill(bit11to5, 7) + rs2 + rs1 + funct3 + sfill(bit4to0, 5) + opcode
+
+		elif (INSTRUCTION[instr]["format"] == "R"):
+			rs1 = instruction.split(" ")[1].split(",")[1]
+			rs2 = instruction.split(" ")[1].split(",")[2]
+
+			check_register(rs1)
+			check_register(rs2)
+
+			rs1 = bin(int(rs1[1:]))[2:].zfill(5)
+			rs2 = bin(int(rs2[1:]))[2:].zfill(5)
+
+			binary = funct7 + rs2 + rs1 + funct3 + rd + opcode
+
+		elif (instr in ["slli", "srli", "srai"]):
+			rs1 = instruction.split(" ")[1].split(",")[1]
+
+			check_register(rs1)
+
+			rs1 = bin(int(rs1[1:]))[2:].zfill(5)
+
+			shamt = instruction.split(" ")[1].split(",")[2]
+			shamt = sfill(sbin(shamt)[0:6], 5)
+
+			binary = funct7 + shamt + rs1 + funct3 + rd + opcode
+
+	except Exception as e:
+		print(f"Error translating instruction '{instruction.rstrip()}': {e}")
+		return None
 
 	return binary
 
@@ -333,18 +501,19 @@ def main():
 	instructions = read_file("instructions.txt")
 	create_file("instruction.mif")
 
-	for i in range(len(instructions)):
-		binary, success = translate(instructions[i])
-		if (success):
-			chunks = [binary[j:j + 8] for j in range(0, len(binary), 8)]
+	for i, instruction in enumerate(instructions):
+		binary = translate_instruction(instruction)
+		if binary:
+			chunks = [
+			 binary[j:j + BITS_IN_CHUNK] for j in range(0, len(binary), BITS_IN_CHUNK)
+			]
 			chunks = chunks[::-1]
-			for j in range(len(chunks)):
-				index = "{:03d}".format(i * 4 + j)
-				write_instruction("instruction.mif", index, chunks[j], instructions[i])
+			for j, chunk in enumerate(chunks):
+				index = f"{i * 4 + j:03d}"
+				write_instruction("instruction.mif", index, chunk, instruction)
 		else:
-			instr = instructions[i].rstrip("\n")
 			line = i + 1
-			print(f"Translation failed for instruction: \"{instr}\" on line {line}.\n")
+			print(f"Translation failed on line {line}.\n")
 			os.remove("instruction.mif")
 			exit(2)
 
@@ -352,4 +521,5 @@ def main():
 	print("Assembly to machine code translation complete.\n")
 
 
-main()
+if __name__ == "__main__":
+	main()
