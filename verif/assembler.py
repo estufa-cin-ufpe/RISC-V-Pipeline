@@ -301,13 +301,32 @@ def end_file(file_name):
 	with open(file_name, "a") as file:
 		file.write("END;")
 
+def negative_to_twos_complement(negative_binary):
+	abs_binary = negative_binary
+	ones_complement = ''.join('1' if bit == '0' else '0' for bit in abs_binary)
+
+	twos_complement = ''
+	carry = 1
+
+	for bit in reversed(ones_complement):
+		if carry == 1:
+			if bit == '0':
+				twos_complement = '1' + twos_complement
+				carry = 0
+			else:
+				twos_complement = '0' + twos_complement
+				carry = 1
+		else:
+			twos_complement = bit + twos_complement
+
+	return twos_complement
 
 # converts a decimal value to a signed binary value (sign bit is the first bit)
 def sbin(value):
 	binary = bin(int(value))
 
 	if (binary[0] == '-'):
-		return '1' + binary[3:]
+		return '1' + negative_to_twos_complement(binary[3:])
 
 	else:
 		return '0' + binary[2:]
