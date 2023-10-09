@@ -45,7 +45,7 @@ module alu#(
             4'b0001:        // OR
                     ALUResult = SrcA | SrcB;
             4'b0010:        // ADD
-                    ALUResult = SrcA + SrcB;
+                    ALUResult = $signed(SrcA) + $signed(SrcB);
             4'b0011:        // XOR
                     ALUResult = SrcA ^ SrcB;
             4'b0100:        // Left Shift
