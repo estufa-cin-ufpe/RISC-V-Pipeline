@@ -17,6 +17,7 @@ module tb_top;
 
   localparam CLKPERIOD = 10;
   localparam CLKDELAY = CLKPERIOD / 2;
+  localparam NUM_CYCLES = 50;
 
   riscv riscV (
       .clk(tb_clk),
@@ -38,25 +39,23 @@ module tb_top;
     #(CLKPERIOD);
     reset = 0;
 
-    #(CLKPERIOD * 50);
+    #(CLKPERIOD * NUM_CYCLES);
 
     $stop;
   end
+  
+  always @(posedge tb_clk) begin : REGISTER
+    if (reg_write_sig)
+      $display($time, ": Register [%d] written with value: [%X] | [%d]\n", reg_num, reg_data, $signed(reg_data));
+  end : REGISTER
 
-  always_comb begin : MEMORY
+  always @(posedge tb_clk) begin : MEMORY
     if (wr && ~rd)
       $display($time, ": Memory [%d] written with value: [%X] | [%d]\n", addr, wr_data, $signed(wr_data));
 
     else if (rd && ~wr)
       $display($time, ": Memory [%d] read with value: [%X] | [%d]\n", addr, rd_data, $signed(rd_data));
   end : MEMORY
-
-  always_comb begin : REGISTER
-    if (reg_write_sig)
-      $display(
-          $time, ": Register [%d] written with value: [%X] | [%d]\n", reg_num, reg_data, $signed(reg_data)
-      );
-  end : REGISTER
 
   //clock generator
   always #(CLKDELAY) tb_clk = ~tb_clk;
